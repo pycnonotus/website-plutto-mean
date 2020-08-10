@@ -1,0 +1,81 @@
+.head {
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.subhead {
+
+  height: 100%;
+  display: block;
+
+}
+
+.sub .head {
+
+
+  overflow: hidden;
+  color: white;
+  width: 100%;
+
+  box-sizing: border-box;
+  display: block;
+
+}
+
+.background {
+  top: 0;
+
+}
+
+.head video {
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  display: block;
+
+}
+
+.head .background {
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 0, 0, 0.5);
+  height: 100%;
+
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+
+}
+
+.warp {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  display: block;
+
+  position: relative;
+  top: -100%;
+
+
+
+}
+
+.slide {
+  box-sizing: border-box;
+  position: sticky;
+  top: 10%;
+  padding: 3rem 3rem;
+  margin: 10px 10px;
+  text-align: center;
+  font-size: 2em;
+  display: block;
+  z-index: 1;
+
+}

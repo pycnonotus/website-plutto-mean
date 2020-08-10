@@ -1,6 +1,29 @@
 main {
-  margin: 2em auto;
-  max-width: 1280px;
-  background-color: rgb(51, 48, 48);
+  margin: 3em auto;
+  /* background-color: #fff; */
   padding: 1em;
+  color: black;
+}
+
+header {
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+
+}
+
+app-sub-video {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100%);
+  display: block;
+
+}
+
+app-header {
+
+  display: block;
+  width: 100%;
 }

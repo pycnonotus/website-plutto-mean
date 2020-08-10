@@ -9,9 +9,9 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   public catagories: { name: string; path: any }[] = [
-    { name: 'חדשות', path: '' },
-    { name: 'עולם הסרביבל', path: '/survival' },
-    { name: 'עולם המיני-גיימס', path: '/minigames' },
+    { name: 'חדשות', path: 'news' },
+    { name: 'עולם הסרביבל', path: 'survival' },
+    { name: 'עולם המיני-גיימס', path: 'minigames' },
     { name: 'חנות השרת', path: '/shop' },
     { name: 'תמיכה', path: 'support' },
     { name: 'אודות', path: 'about' },

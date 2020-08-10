@@ -5,27 +5,39 @@ body {
   height: 100%;
 }
 
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: white;
+
 }
 
 body {
+
   background-image: url("assets/img/minecraft-dirt.jpg");
-  background-repeat: repeat;
+
+
 }
 
 body {
   /* background: linear-gradient(rgb(0, 0, 0.05), rgba(255, 0, 0, 0.5)); */
 }
 
-html,
-body {
+app-root {
   height: 100%;
+  box-sizing: border-box;
+
+  display: block;
+  overflow-y: scroll;
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+
+:root {
+  --page-size: 1280px;
+}
+
+.site-row {
+  max-width: var(--page-size);
 }

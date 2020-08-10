@@ -8,6 +8,11 @@ a {
   font-size: 1.0em;
 }
 
+ul li a {
+  padding: 0 1em;
+  display: inline-block
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -21,6 +26,33 @@ ul {
 
 mat-toolbar {
   position: sticky;
-  z-index: 1000;
-  top: 0;
+
+
+}
+
+.unscrolled {}
+
+.sidenav-warp {
+  display: flex;
+  width: var(--page-size);
+  margin: 0 auto;
+}
+
+
+
+.links-mobile {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  app-main-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  mat-toolbar {
+    display: none;
+    z-index: 9999;
+  }
 }

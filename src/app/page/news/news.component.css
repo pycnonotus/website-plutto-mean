@@ -1,0 +1,22 @@
+img {}
+
+.imgcut {
+  max-height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+mat-card {
+  margin-top: 1em;
+}
+
+mat-card-footer {
+  text-align: left;
+  padding: 0em 1em;
+  color: #ccc;
+}
+
+.imgcut {
+  margin: 1em auto;
+  border-radius: 0.5em;
+}

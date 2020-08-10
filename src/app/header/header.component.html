@@ -1,51 +1,51 @@
-<mat-toolbar color="accent">
-  <!-- <button
-    hidden="true"
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with menu icon"
-  >
-    <mat-icon>menu</mat-icon>
-  </button> -->
-  <span>
-    מיני-ישראל
-  </span>
+<mat-toolbar class="unscrolled" color="primary">
+  <div class="sidenav-warp">
+    <button
+      hidden="true"
+      mat-icon-button
+      class="links-mobile"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
 
-  <ul>
-    <li *ngFor="let cat of catagories">
-      <a mat-button routerLink="{{ cat.path }}" routerLinkActive="mat-primary">
-        {{ cat.name }}
-      </a>
-    </li>
-  </ul>
+    <ul class="links-desktop">
+      <li *ngFor="let cat of catagories">
+        <a
+          mat-button
+          routerLink="{{ cat.path }}"
+          routerLinkActive="mat-accent"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ cat.name }}
+        </a>
+      </li>
+    </ul>
 
-  <span class="example-spacer"></span>
-  <button
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-  >
-    <mat-icon>expand_more</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-  >
-    <mat-icon>admin_panel_settings</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    class="example-icon"
-    aria-label="Example icon-button with share icon"
-  >
-    <mat-icon>admin_panel_settings</mat-icon>
-  </button>
+    <span class="example-spacer"></span>
+
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      [matMenuTriggerFor]="menuLogin"
+    >
+      <mat-icon>expand_more</mat-icon>
+    </button>
+    <mat-menu #menuLogin="matMenu" color="primary">
+      <button mat-menu-item routerLink="/login">התחברות</button>
+      <button mat-menu-item routerLink="/login">הרשמה</button>
+    </mat-menu>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      routerLink="/admin"
+      routerLinkActive="mat-accent"
+    >
+      <mat-icon>admin_panel_settings</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
+
+<app-main-nav> </app-main-nav>
