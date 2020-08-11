@@ -1,8 +1,25 @@
-<mat-tab-group >
-  <mat-tab label="הוסף חדשות"> Content 1 </mat-tab>
-  <mat-tab label="נהל סרביבאל"> Content 2 </mat-tab>
-  <mat-tab label="נהל מיניגמס">
-    <app-minigames-admin></app-minigames-admin>
-  </mat-tab>
-  <mat-tab label="תמיכה"> Content 3 </mat-tab>
-</mat-tab-group>
+<div class="warp">
+  <mat-toolbar class="b" [class.mat-elevation-z8]="true">
+    <button
+      mat-button
+      routerLink="main"
+      routerLinkActive="mat-accent"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      ראשי
+    </button>
+    <button
+      mat-button
+      routerLink="news/news-list"
+      routerLinkActive="mat-accent"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      חדשות
+    </button>
+  </mat-toolbar>
+</div>
+<div class="sub-page">
+  <div class="site-row">
+    <router-outlet></router-outlet>
+  </div>
+</div>

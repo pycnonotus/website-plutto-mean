@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+
+.spacer {
+  border: 1px solid red;
+  flex: 1 1 auto;
+}
+
+form {
+  display: relative;
+  display: block;
+  border: 1px solid palegreen;
+}
+
+.btn-new {}

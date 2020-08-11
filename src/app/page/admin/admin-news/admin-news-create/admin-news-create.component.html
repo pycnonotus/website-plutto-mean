@@ -1,0 +1,40 @@
+<form (submit)="onSave()" [formGroup]="form">
+  <div id="quill">
+    <p>
+      <button mat-button>
+        שמור יא פלוטו
+      </button>
+    </p>
+    <p>
+      <mat-form-field class="full-width">
+        <mat-label>כותרת</mat-label>
+        <input matInput formControlName="title" type="text" />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>קטגוריה</mat-label>
+        <mat-select formControlName="category" [(value)]="selectedFood">
+          <mat-option></mat-option>
+          <mat-option [value]="option.value" *ngFor="let option of foods">{{
+            option.viewValue
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+    <quill-editor
+      [styles]="editorStyle"
+      placeholder="הכנס טקסט"
+      required
+      (onEditorChanged)="onEditorChanged($event)"
+    >
+    </quill-editor>
+  </div>
+</form>
+<div>
+  <h1>
+    הצצה:
+  </h1>
+  <div [innerHTML]="editorContent"></div>
+</div>
+<!-- formControlName="yourCtrlname" -->

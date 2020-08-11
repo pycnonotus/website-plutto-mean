@@ -1,12 +1,12 @@
 main {
-  margin: 3em auto;
+
   /* background-color: #fff; */
-  padding: 1em;
+
   color: black;
 }
 
 header {
-  position: fixed;
+  position: sticky;
   margin: 0 auto;
   top: 0;
   z-index: 4;

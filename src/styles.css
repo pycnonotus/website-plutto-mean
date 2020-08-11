@@ -5,19 +5,14 @@ body {
   height: 100%;
 }
 
-
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: white;
-
 }
 
 body {
-
   background-image: url("assets/img/minecraft-dirt.jpg");
-
-
 }
 
 body {
@@ -27,12 +22,17 @@ body {
 app-root {
   height: 100%;
   box-sizing: border-box;
-
   display: block;
   overflow-y: scroll;
 }
 
+header {
+  direction: rtl;
+}
 
+main {
+  direction: rtl;
+}
 
 :root {
   --page-size: 1280px;
@@ -40,4 +40,6 @@ app-root {
 
 .site-row {
   max-width: var(--page-size);
+  margin: 0 auto;
+  padding: 1em;
 }

@@ -19,12 +19,18 @@
       <br />
       שחבשדג שדגשדג
     </p>
-
-    <button mat-flat-button color="primary">
-      הרשם
-    </button>
-    <button mat-stroked-button color="primary">
-      התחבר
-    </button>
+    <div>
+      <button mat-flat-button routerLink="/login" color="primary">
+        הרשם
+      </button>
+      <button
+        mat-stroked-button
+        color="primary"
+        routerLink="/login"
+        class="login"
+      >
+        התחבר
+      </button>
+    </div>
   </div>
 </div>

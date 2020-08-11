@@ -1,21 +1,15 @@
-<mat-card class="example-card" *ngFor="let x of arr">
+<mat-card class="example-card" *ngFor="let n of rawNews">
   <mat-card-header>
-    <mat-card-title>נוסף קווסט חדש</mat-card-title>
+    <mat-card-title>
+      {{ n.title }}
+    </mat-card-title>
     <mat-card-subtitle>אני לא מרגיש את הפה שלי</mat-card-subtitle>
   </mat-card-header>
   <div class="imgcut">
-    <img
-      mat-card-image
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-kX-w3tf7_4ZyJGThkuNipKPYl--UE5fwfQ&usqp=CAU"
-      alt="Photo of a Shiba Inu"
-    />
+    <img mat-card-image [src]="n.imagePath" alt="Photo of a Shiba Inu" />
   </div>
   <mat-card-content>
-    <p>
-      לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית קולהע צופעט למרקוח
-      איבן איף, ברומץ כלרשט מיחוצים. קלאצי סחטיר בלובק. תצטנפל בלינדו למרקל אס
-      לכימפו, דול, צוט ומעיוט - לפתיעם ברשג - ולתיעם גדדיש. קוויז דומור ליאמום
-    </p>
+    <p [innerHTML]="n.content"></p>
     <mat-divider></mat-divider>
     <p>
       בלינך רוגצה. לפמעט סה"כ תגובת: 666 פורסם ב 01.02.2018

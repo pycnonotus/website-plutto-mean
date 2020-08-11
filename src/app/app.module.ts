@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,19 @@ import { SubVideoComponent } from './sub-video/sub-video.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { NewsComponent } from './page/news/news.component';
+import { MiniameListComponent } from './minigame/miniame-list/miniame-list.component';
+import { MiniameListItemComponent } from './minigame/miniame-list-item/miniame-list-item.component';
+import { MiniameListDetilComponent } from './minigame/miniame-list-detil/miniame-list-detil.component';
+import { AdminMainComponent } from './page/admin/admin-main/admin-main.component';
+import { FooterComponent } from './footer/footer.component';
+import { AdminNewsComponent } from './page/admin/admin-news/admin-news.component';
+import { MatTableModule } from '@angular/material/table';
+import { AdminNewsCreateComponent } from './page/admin/admin-news/admin-news-create/admin-news-create.component';
+import { AdminNewsListComponent } from './page/admin/admin-news/admin-news-list/admin-news-list.component';
+import { QuillModule } from 'ngx-quill';
+import { CommonModule } from '@angular/common';
+import { MatSelectModule } from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,6 +67,14 @@ import { NewsComponent } from './page/news/news.component';
     SingupComponent,
     SubVideoComponent,
     NewsComponent,
+    MiniameListComponent,
+    MiniameListItemComponent,
+    MiniameListDetilComponent,
+    AdminMainComponent,
+    FooterComponent,
+    AdminNewsComponent,
+    AdminNewsCreateComponent,
+    AdminNewsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +95,12 @@ import { NewsComponent } from './page/news/news.component';
     MatMenuModule,
     MatCardModule,
     MatDividerModule,
+    MatTableModule,
+    CommonModule,
+    ReactiveFormsModule,
+    QuillModule.forRoot(),
+    MatSelectModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

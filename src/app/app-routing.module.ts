@@ -10,6 +10,10 @@ import { AdminComponent } from './page/admin/admin.component';
 import { LoginComponent } from './auth/login/login.component';
 import { NewsComponent } from './page/news/news.component';
 import { SubVideoComponent } from './sub-video/sub-video.component';
+import { AdminMainComponent } from './page/admin/admin-main/admin-main.component';
+import { AdminNewsComponent } from './page/admin/admin-news/admin-news.component';
+import { AdminNewsCreateComponent } from './page/admin/admin-news/admin-news-create/admin-news-create.component';
+import { AdminNewsListComponent } from './page/admin/admin-news/admin-news-list/admin-news-list.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -17,7 +21,22 @@ const routes: Routes = [
   { path: 'support', component: SupportComponent },
   { path: 'minigames', component: MinigameComponent },
   { path: 'survival', component: SurvivalComponent },
-  { path: 'admin', component: AdminComponent },
+  {
+    path: 'admin',
+    component: AdminComponent,
+
+    children: [
+      { path: 'main', component: AdminMainComponent },
+      {
+        path: 'news',
+        component: AdminNewsComponent,
+        children: [
+          { path: 'news-list', component: AdminNewsListComponent },
+          { path: 'news-create', component: AdminNewsCreateComponent },
+        ],
+      },
+    ],
+  },
   { path: 'login', component: LoginComponent },
   { path: 'news', component: NewsComponent },
   {

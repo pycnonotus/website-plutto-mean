@@ -1,3 +1,12 @@
 mat-tab {
   margin-top: 2em;
 }
+
+.warp {
+  background-color: white;
+}
+
+.sub-page {
+  background-color: white;
+  border: 1px solid white;
+}
