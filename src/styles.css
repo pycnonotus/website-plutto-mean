@@ -38,6 +38,7 @@ main {
   --page-size: 1600px;
   --sub-color: #ccc;
   --gray-background: #f0f0f0;
+  --gray-background-active: #c7c7c7;
   --url-image-minecraft-arena: "assets/img/minecraft-arena.png";
   --url: url("https://download.unsplash.com/photo-1420708392410-3c593b80d416");
   --color-main: #111;
@@ -57,7 +58,22 @@ main {
 
 .background-arena {
   background-image: url("assets/img/muiecraft-arena.png");
+  background-position: center;
+  background-size: cover;
 }
+
+.background-city {
+  background-image: url("assets/img/minecraft-city.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.best-fit {
+  background-position: center;
+  background-size: cover;
+}
+
+
 
 .big-pad {
   padding: 6em;

@@ -51,6 +51,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './shared/card/card.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MiniCardComponent } from './shared/mini-card/mini-card.component';
+import { FeatureItemComponent } from './shared/feature-item/feature-item.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { MiniCardComponent } from './shared/mini-card/mini-card.component';
     AdminNewsListComponent,
     CardComponent,
     MiniCardComponent,
+    FeatureItemComponent,
   ],
   imports: [
     BrowserModule,

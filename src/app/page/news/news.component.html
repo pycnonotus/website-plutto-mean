@@ -1,4 +1,4 @@
-<div class="background-arena">
+<div class="background-arena" [class.mat-elevation-z8]="true">
   <div class="site-row big-pad">
     <app-card
       *ngFor="let n of rawNews.slice(0, 3)"
@@ -8,7 +8,7 @@
     </app-card>
   </div>
 </div>
-<div class="site-row-background">
+<div class="site-row-background mat-elevation-z8">
   <div class="site-row">
     <section>
       <div class="example-button-row">
@@ -31,7 +31,7 @@
     </div>
   </div>
 
-  <div class="site-row">
+  <div class="site-row load-more-wrap">
     <button mat-button>
       טען עוד
     </button>

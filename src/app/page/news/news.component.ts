@@ -9,7 +9,6 @@ import { NewsService } from './news.service';
   styleUrls: ['./news.component.css'],
 })
 export class NewsComponent implements OnInit {
-  arr = [1, 2, 3, 4, 5, 6];
   rawNews: News[] = [];
   private postsSubscription: Subscription;
   constructor(private news: NewsService) {}
@@ -20,8 +19,6 @@ export class NewsComponent implements OnInit {
       .getNewsUpdatedListener()
       .subscribe((newsData) => {
         this.rawNews = newsData.data;
-        console.log(newsData);
       });
   }
-  
 }

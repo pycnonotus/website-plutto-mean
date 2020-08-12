@@ -1,1 +1,23 @@
-<p>survival works!</p>
+<div class="background-city" [class.mat-elevation-z8]="true">
+  <div class="site-row big-pad">
+    <h1>
+      עולם הסרביבל
+    </h1>
+    <h2>
+      מידע ו עוד שיט אחר כזה או אחר
+    </h2>
+  </div>
+</div>
+<div class="site-row-background mat-elevation-z8">
+  <br />
+  <mat-divider></mat-divider>
+  <br />
+  <div class="site-row">
+    <div>
+      <app-feature-item
+        *ngFor="let feat of featureList"
+        [title]="feat.title"
+      ></app-feature-item>
+    </div>
+  </div>
+</div>

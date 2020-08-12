@@ -35,3 +35,7 @@ mat-card-footer {
 app-card {
   text-align: right;
 }
+
+.load-more-wrap button {
+  width: 100%;
+}
