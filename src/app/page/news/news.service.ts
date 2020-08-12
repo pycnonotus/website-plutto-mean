@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { News } from './news.model';
 
+const ipAddres = '85.65.61.221:3000'; //localhost:3000
 @Injectable({
   providedIn: 'root',
 })
@@ -25,7 +26,7 @@ export class NewsService {
     console.log(data);
 
     return this.http
-      .post('http://localhost:3000/api/newsManger', data)
+      .post('http://' + ipAddres + '/api/newsManger', data)
       .subscribe((responseData) => {
         this.router.navigate(['/']);
       });
@@ -33,7 +34,7 @@ export class NewsService {
 
   loadNews() {
     this.http
-      .get<any>('http://localhost:3000/api/newsManger')
+      .get<any>('http://' + ipAddres + '/api/newsManger')
       .subscribe((responseData) => {
         this.newsUpdated.next({
           data: responseData.data,

@@ -1,3 +1,8 @@
+:host {
+  background-image: var(--url);
+
+}
+
 img {}
 
 .imgcut {
@@ -19,4 +24,14 @@ mat-card-footer {
 .imgcut {
   margin: 1em auto;
   border-radius: 0.5em;
+}
+
+
+
+.site-row {
+  text-align: center;
+}
+
+app-card {
+  text-align: right;
 }

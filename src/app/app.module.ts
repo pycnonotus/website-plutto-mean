@@ -48,6 +48,9 @@ import { QuillModule } from 'ngx-quill';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './shared/card/card.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { MiniCardComponent } from './shared/mini-card/mini-card.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +78,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdminNewsComponent,
     AdminNewsCreateComponent,
     AdminNewsListComponent,
+    CardComponent,
+    MiniCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -101,6 +106,7 @@ import { HttpClientModule } from '@angular/common/http';
     QuillModule.forRoot(),
     MatSelectModule,
     HttpClientModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

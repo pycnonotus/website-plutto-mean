@@ -1,0 +1,53 @@
+:host {
+  display: inline-block;
+  padding: 1em 1em;
+  background-color: rgba(18, 18, 18, 0.8);
+
+  transition: 1.3s;
+  width: 350px;
+  margin: 0.5em 0.5em;
+
+
+  color: white;
+  height: 400px;
+  position: relative;
+  border-radius: 0.1em;
+  cursor: pointer;
+
+
+}
+
+.title {
+
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.img-wrap {
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+
+}
+
+img {
+  transition: transform 0.4s;
+  max-height: 200px;
+}
+
+img:hover {
+  transform: scale(1.1);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+
+.date {
+  text-align: left;
+  color: var(--sub-color);
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+}

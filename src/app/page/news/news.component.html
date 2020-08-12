@@ -1,5 +1,52 @@
-<mat-card class="example-card" *ngFor="let n of rawNews">
-  <mat-card-header>
+<div class="background-arena">
+  <div class="site-row big-pad">
+    <app-card
+      *ngFor="let n of rawNews.slice(0, 3)"
+      [title]="n.title"
+      [class.mat-elevation-z2]="true"
+    >
+    </app-card>
+  </div>
+</div>
+<div class="site-row-background">
+  <div class="site-row">
+    <section>
+      <div class="example-button-row">
+        <button mat-stroked-button>Basic</button>
+        <button mat-stroked-button color="primary">Primary</button>
+        <button mat-stroked-button color="accent">Accent</button>
+        <button mat-stroked-button color="warn">Warn</button>
+        <button mat-stroked-button disabled>Disabled</button>
+        <a mat-stroked-button href="https://www.google.com/" target="_blank"
+          >Link</a
+        >
+      </div>
+    </section>
+    <br />
+    <mat-divider></mat-divider>
+    <div>
+      <mat-card *ngFor="let n of rawNews.slice(3, rawNews.length - 3)">
+        <app-mini-card [title]="n.title"> </app-mini-card>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="site-row">
+    <button mat-button>
+      טען עוד
+    </button>
+  </div>
+</div>
+
+<!-- <app-card
+      *ngFor="let n of rawNews.slice(3, 999)"
+      [title]="n.title"
+      [class.mat-elevation-z2]="true"
+    >
+    </app-card> -->
+<!-- <mat-card class="example-card" *ngFor="let n of rawNews">
+  </mat-card> -->
+<!-- <mat-card-header>
     <mat-card-title>
       {{ n.title }}
     </mat-card-title>
@@ -14,5 +61,4 @@
     <p>
       בלינך רוגצה. לפמעט סה"כ תגובת: 666 פורסם ב 01.02.2018
     </p>
-  </mat-card-content>
-</mat-card>
+  </mat-card-content> -->

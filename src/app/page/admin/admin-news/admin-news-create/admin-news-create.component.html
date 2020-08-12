@@ -22,13 +22,16 @@
         </mat-select>
       </mat-form-field>
     </p>
-    <quill-editor
+    <!-- <quill-editor
       [styles]="editorStyle"
       placeholder="הכנס טקסט"
       required
       (onEditorChanged)="onEditorChanged($event)"
     >
-    </quill-editor>
+    </quill-editor> -->
+    <mat-form-field class="full-width">
+      <textarea matInput formControlName="content" type="text"> </textarea>
+    </mat-form-field>
   </div>
 </form>
 <div>

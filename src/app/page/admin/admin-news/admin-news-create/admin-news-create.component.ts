@@ -39,6 +39,7 @@ export class AdminNewsCreateComponent implements OnInit {
     this.form = new FormGroup({
       title: new FormControl(null, {}),
       category: new FormControl(null, {}),
+      content: new FormControl(null, {}),
     });
   }
   onEditorChanged(event: EditorChangeContent | EditorChangeSelection): void {
@@ -47,7 +48,7 @@ export class AdminNewsCreateComponent implements OnInit {
   onSave(): void {
     const newsPost = {
       title: this.form.value.title,
-      content: this.editorContent,
+      content: this.form.value.content,
       category: this.form.value.category,
     };
     console.log('====================================');

@@ -35,11 +35,30 @@ main {
 }
 
 :root {
-  --page-size: 1280px;
+  --page-size: 1600px;
+  --sub-color: #ccc;
+  --gray-background: #f0f0f0;
+  --url-image-minecraft-arena: "assets/img/minecraft-arena.png";
+  --url: url("https://download.unsplash.com/photo-1420708392410-3c593b80d416");
+  --color-main: #111;
 }
 
 .site-row {
   max-width: var(--page-size);
   margin: 0 auto;
   padding: 1em;
+}
+
+.site-row-background {
+  margin: 0 auto;
+
+  background-color: var(--gray-background);
+}
+
+.background-arena {
+  background-image: url("assets/img/muiecraft-arena.png");
+}
+
+.big-pad {
+  padding: 6em;
 }
