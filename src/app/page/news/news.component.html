@@ -1,6 +1,7 @@
 <div class="background-arena">
   <div class="big-pad">
     <app-card
+      routerLink="{{ '/news/' + n.id }}"
       *ngFor="let n of rawNews.slice(0, 3)"
       [title]="n.title"
       [class.mat-elevation-z2]="true"
@@ -8,17 +9,18 @@
     </app-card>
   </div>
   <div class="screen">
-    <div class="scroll-icon">
+    <div class="scroll-icon" (click)="scrollTo(allNewDIv)">
       <mat-icon>expand_more</mat-icon>
     </div>
   </div>
 </div>
-<div class="site-row-background">
+<div class="site-row-background" #allNewDIv>
   <div class="site-row">
     <br />
     <div>
       <mat-card *ngFor="let n of rawNews.slice(3, rawNews.length - 3)">
-        <app-mini-card [title]="n.title"> </app-mini-card>
+        <app-mini-card routerLink="{{ '/news/' + n.id }}" [title]="n.title">
+        </app-mini-card>
       </mat-card>
     </div>
   </div>
@@ -29,7 +31,6 @@
     </button>
   </div>
 </div>
-
 <!-- <app-card
       *ngFor="let n of rawNews.slice(3, 999)"
       [title]="n.title"

@@ -21,4 +21,12 @@ export class NewsComponent implements OnInit {
         this.rawNews = newsData.data;
       });
   }
+
+  scrollTo(element: HTMLElement): void {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+  }
 }

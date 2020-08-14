@@ -33,27 +33,26 @@
 
     <span class="example-spacer"></span>
 
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with share icon"
-      [matMenuTriggerFor]="menuLogin"
-    >
-      <mat-icon>expand_more</mat-icon>
-    </button>
-    <mat-menu #menuLogin="matMenu" color="primary">
-      <button mat-menu-item routerLink="/login">התחברות</button>
-      <button mat-menu-item routerLink="/login">הרשמה</button>
-    </mat-menu>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with share icon"
-      routerLink="/admin/main"
-      routerLinkActive="mat-accent"
-    >
-      <mat-icon>admin_panel_settings</mat-icon>
-    </button>
+    <ul class="links-desktop">
+      <li>
+        <button mat-button href="">
+          minecraft.israil.com
+        </button>
+      </li>
+      <li>
+        <a
+          mat-icon-button
+          class="example-icon"
+          target="_blank"
+          aria-label="Example icon-button with share icon"
+          href=" https://discord.gg/zvAnJAx"
+        >
+          <button mat-button>
+            d
+          </button>
+        </a>
+      </li>
+    </ul>
   </div>
 </mat-toolbar>
 

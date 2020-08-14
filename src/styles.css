@@ -29,7 +29,10 @@ header {
   direction: rtl;
 }
 
-main {}
+main {
+  z-index: 4;
+}
+
 
 footer {
   color: white;
@@ -120,16 +123,58 @@ footer {
   text-align: center;
 }
 
+body {
+  background-color: var(--gray-background);
+}
+
 body::-webkit-scrollbar {
-  width: 0.0em;
+  width: 0.4em;
 }
 
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 0.3em grey;
+  box-shadow: inset 0 0 0.3em rgba(202, 200, 200, 0.212);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--color-main-blue);
+  background-color: var(--color-main-transparent);
   height: 10%;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.before-foot {
+
+  display: block;
+  position: relative;
+  height: 150px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.before-foot:before {
+  display: block;
+  content: ' ';
+  z-index: 3;
+
+
+
+}
+
+.before-foot:after {
+  display: block;
+  content: ' ';
+  z-index: 1;
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  filter: blur(1px);
+  transform: scale(1.2);
+
+  background-image: url('assets/img/minecraft-bottom.png');
+  background-position: top;
+  background-size: cover;
 
 }

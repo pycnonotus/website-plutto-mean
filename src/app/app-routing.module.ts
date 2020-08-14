@@ -39,6 +39,7 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'news', component: NewsComponent },
+  { path: 'news/:id', component: NewsComponent },
   {
     path: 'blop  ',
 

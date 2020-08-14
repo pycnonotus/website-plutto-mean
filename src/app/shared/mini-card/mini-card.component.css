@@ -6,9 +6,7 @@
 
 
 
-.text {
-  flex: 0 1;
-}
+.text {}
 
 .text {
 
@@ -23,13 +21,15 @@
   width: calc(100% - 285px);
   box-sizing: border-box;
   padding: 1em 1em;
+  margin-bottom: auto;
 
 }
 
 img {
   width: 265px;
-  height: 140px;
-  margin-right: 20px;
+  height: 100%;
+  transform: scaleY(1.2);
   display: inline-block;
+
 
 }
