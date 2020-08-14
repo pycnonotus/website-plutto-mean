@@ -1,7 +1,7 @@
 :host {
-  background-image: var(--url);
-
+  --ime-pad: 50em;
 }
+
 
 img {}
 
@@ -13,6 +13,18 @@ img {}
 
 mat-card {
   margin-top: 1em;
+  z-index: 5;
+  position: relative;
+}
+
+app-card {
+  position: relative;
+}
+
+
+mat-card:hover {
+  box-shadow: 0 0 5px var(--color-main);
+  cursor: pointer;
 }
 
 mat-card-footer {
@@ -34,8 +46,96 @@ mat-card-footer {
 
 app-card {
   text-align: right;
+  width: 300px;
+  overflow: hidden;
+  height: 450px;
+  position: relative;
+  z-index: 2;
+  opacity: 0.9;
+  box-sizing: border-box;
 }
 
 .load-more-wrap button {
   width: 100%;
+}
+
+.background-arena {
+  padding-bottom: var(--ime-pad);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+
+.site-row-background {
+  position: relative;
+  margin-top: calc(var(--ime-pad) * -1);
+
+  z-index: 3;
+  overflow: hidden;
+}
+
+.site-row:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+
+  background: linear-gradient(180deg, rgba(240, 240, 240, 0) 0%, rgba(240, 240, 240, 1) 10%, rgba(240, 240, 240, 1) 100%) !important;
+  height: 100%;
+  width: 100%;
+  filter: blur(4px);
+  display: block;
+  transform: scaleX(1.1);
+}
+
+
+
+
+.big-pad {}
+
+.scroll-icon {
+  display: block;
+
+  font-size: 18em;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  animation: scroll-animation 0.5s infinite;
+  animation-direction: alternate-reverse;
+
+}
+
+.mat-icon {
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 0 10px #69e0ff,
+    0 0 20px #69e0ff,
+    0 0 40px #69e0ff;
+}
+
+.screen {
+  z-index: 0;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  height: 100vh;
+  width: 100%;
+}
+
+@keyframes scroll-animation {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: 0.05em;
+  }
 }

@@ -4,17 +4,41 @@
       mat-button
       routerLink="main"
       routerLinkActive="mat-accent"
-      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLinkActiveOptions]="{ exact: false }"
     >
       ראשי
     </button>
     <button
       mat-button
-      routerLink="news/news-list"
+      routerLink="news/"
+      [routerLinkActiveOptions]="{ exact: false }"
       routerLinkActive="mat-accent"
-      [routerLinkActiveOptions]="{ exact: true }"
     >
       חדשות
+    </button>
+    <button
+      mat-button
+      routerLink="survival/"
+      [routerLinkActiveOptions]="{ exact: false }"
+      routerLinkActive="mat-accent"
+    >
+      survival
+    </button>
+    <button
+      mat-button
+      routerLink="minigames/"
+      [routerLinkActiveOptions]="{ exact: false }"
+      routerLinkActive="mat-accent"
+    >
+      minigames
+    </button>
+    <button
+      mat-button
+      routerLink="support/"
+      [routerLinkActiveOptions]="{ exact: false }"
+      routerLinkActive="mat-accent"
+    >
+      support
     </button>
   </mat-toolbar>
 </div>

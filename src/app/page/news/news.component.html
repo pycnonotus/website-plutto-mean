@@ -1,5 +1,5 @@
-<div class="background-arena" [class.mat-elevation-z8]="true">
-  <div class="site-row big-pad">
+<div class="background-arena">
+  <div class="big-pad">
     <app-card
       *ngFor="let n of rawNews.slice(0, 3)"
       [title]="n.title"
@@ -7,23 +7,15 @@
     >
     </app-card>
   </div>
+  <div class="screen">
+    <div class="scroll-icon">
+      <mat-icon>expand_more</mat-icon>
+    </div>
+  </div>
 </div>
-<div class="site-row-background mat-elevation-z8">
+<div class="site-row-background">
   <div class="site-row">
-    <section>
-      <div class="example-button-row">
-        <button mat-stroked-button>Basic</button>
-        <button mat-stroked-button color="primary">Primary</button>
-        <button mat-stroked-button color="accent">Accent</button>
-        <button mat-stroked-button color="warn">Warn</button>
-        <button mat-stroked-button disabled>Disabled</button>
-        <a mat-stroked-button href="https://www.google.com/" target="_blank"
-          >Link</a
-        >
-      </div>
-    </section>
     <br />
-    <mat-divider></mat-divider>
     <div>
       <mat-card *ngFor="let n of rawNews.slice(3, rawNews.length - 3)">
         <app-mini-card [title]="n.title"> </app-mini-card>

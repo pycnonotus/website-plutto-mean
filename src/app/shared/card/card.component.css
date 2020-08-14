@@ -1,19 +1,49 @@
 :host {
   display: inline-block;
-  padding: 1em 1em;
+  padding: 8px 8px;
   background-color: rgba(18, 18, 18, 0.8);
 
   transition: 1.3s;
   width: 350px;
-  margin: 0.5em 0.5em;
-
-
+  margin: 0.5em 2em;
+  box-shadow: 0 0 20px rgba(18, 18, 18, 0.8);
+  border: 2px solid rgba(18, 18, 18, 0.8);
   color: white;
-  height: 400px;
+  height: 420px;
   position: relative;
-  border-radius: 0.1em;
+  border-radius: 4px;
   cursor: pointer;
+  z-index: 7;
+  opacity: 0.9;
 
+}
+
+:host:before {
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  position: absolute;
+  left: 0;
+  z-index: -10;
+  content: "x ";
+
+
+  filter: grayscale(100%);
+}
+
+
+:host:hover>img {
+  color: red;
+  transform: scale(1.2);
+
+  border: 2px solid red;
+
+}
+
+:host:hover {
+  background-color: rgba(18, 18, 18);
+  opacity: 1;
 
 }
 
@@ -25,21 +55,30 @@
 
 .img-wrap {
   overflow: hidden;
+  width: 100%;
+  height: 190px;
+  margin: 10px -1em;
+  z-index: 40;
+  transform: scale(1.2);
+
 }
 
 .img {
   width: 100%;
+  transform: translateX(100px);
+  z-index: 42;
 
 }
 
+
+
 img {
-  transition: transform 0.4s;
-  max-height: 200px;
+  transition: all 0.5s 0s ease;
+
 }
 
 img:hover {
-  transform: scale(1.1);
-  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.4);
 }
 
 

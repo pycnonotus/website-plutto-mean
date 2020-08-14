@@ -20,6 +20,5 @@ export class SurvivalComponent implements OnInit {
       .subscribe((data) => {
         this.featureList = data.data;
       });
-    this.survival.loadFeature();
   }
 }

@@ -13,4 +13,6 @@ form {
   border: 1px solid palegreen;
 }
 
-.btn-new {}
+.space {
+  border: 1px solid pink;
+}

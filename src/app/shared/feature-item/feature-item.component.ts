@@ -9,7 +9,7 @@ export class FeatureItemComponent implements OnInit {
   constructor() {}
   @Input() title = '';
   @Input() imagePath =
-    'https://is4-ssl.mzstatic.com/image/thumb/Purple123/v4/ef/b0/8c/efb08c81-500a-a70d-5b8c-5a60170359f9/pr_source.png/643x0w.png';
+    'https://i.pinimg.com/originals/45/ae/f5/45aef5cc24a0402fc44cbeb9d63fdee6.png';
   @Input() link = '';
   ngOnInit(): void {}
 }

@@ -52,6 +52,8 @@ import { CardComponent } from './shared/card/card.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MiniCardComponent } from './shared/mini-card/mini-card.component';
 import { FeatureItemComponent } from './shared/feature-item/feature-item.component';
+import { SharedFeatureDetailComponent } from './shared-feature-detail/shared-feature-detail.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -82,6 +84,7 @@ import { FeatureItemComponent } from './shared/feature-item/feature-item.compone
     CardComponent,
     MiniCardComponent,
     FeatureItemComponent,
+    SharedFeatureDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -109,6 +112,7 @@ import { FeatureItemComponent } from './shared/feature-item/feature-item.compone
     MatSelectModule,
     HttpClientModule,
     MatChipsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

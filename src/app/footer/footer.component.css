@@ -1,5 +1,32 @@
 :host {
   background-color: var(--color-main);
   display: block;
-  padding: 1em 1em;
+  padding: 0.5em 0;
+}
+
+.flex {
+  display: flex;
+
+}
+
+.flex>div {
+  border-right: 1px solid var(--color-main);
+  display: inline-block;
+  height: 100%;
+  margin: 1em 1em;
+
+}
+
+.flex>div:first-child {
+  border-right: none;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+ul,
+li {
+  list-style: none;
 }

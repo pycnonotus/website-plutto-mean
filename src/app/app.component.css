@@ -1,15 +1,12 @@
 main {
-
-  /* background-color: #fff; */
-
-  color: black;
+  min-height: 100%;
 }
 
 header {
-  position: sticky;
+  position: fixed;
   margin: 0 auto;
   top: 0;
-  z-index: 4;
+  z-index: 9999;
   width: 100%;
 
 }
@@ -26,6 +23,16 @@ app-header {
 
   display: block;
   width: 100%;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35)
 }
 
+app-support {
+  height: 100%;
+  display: block;
+  background-color: red;
+}
 
+router-outlet {
+  height: 100%;
+  display: block;
+}

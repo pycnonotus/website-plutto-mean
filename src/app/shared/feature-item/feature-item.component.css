@@ -1,18 +1,23 @@
 :host {
   background: white;
-
   display: inline-block;
-  padding: 0.2em 0.2em;
+  padding: 0.5em 0.3em;
   margin: 0.2em 0.2em;
   width: 250px;
   color: var(--color-main);
   height: 75px;
   box-shadow: 5px 5px 5px #aaaaaa;
 
+
 }
 
 :host:hover {
-  background-color: var(--gray-background-active);
+  background-color: var(--color-main-blue);
+}
+
+:host.active {
+  box-shadow: none;
+  background-color: transparent;
 }
 
 img {
@@ -20,6 +25,9 @@ img {
   height: 75px;
   background-size: contain;
   display: inline-block;
+
+  box-sizing: border-box;
+
 }
 
 .title {
@@ -28,11 +36,23 @@ img {
   display: inline-block;
   height: 100%;
   color: #393b40;
-  text-decoration: none;
+
   overflow: hidden;
   width: calc(100% - 75px);
-  padding: 1em 1em;
+
   font-size: 1.2em;
   box-sizing: border-box;
+
+
+
+}
+
+.title>div {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  height: 100%;
+
 
 }

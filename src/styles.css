@@ -5,43 +5,47 @@ body {
   height: 100%;
 }
 
+
+html {
+  font-family: Roboto,
+    "Helvetica Neue",
+    sans-serif,
+    'Alef',
+    sans-serif;
+  ;
+}
+
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  color: white;
+  -webkit-font-smoothing: antialiased;
+
 }
 
-body {
-  background-image: url("assets/img/minecraft-dirt.jpg");
-}
 
-body {
-  /* background: linear-gradient(rgb(0, 0, 0.05), rgba(255, 0, 0, 0.5)); */
-}
 
-app-root {
-  height: 100%;
-  box-sizing: border-box;
-  display: block;
-  overflow-y: scroll;
-}
+
 
 header {
   direction: rtl;
 }
 
-main {
-  direction: rtl;
+main {}
+
+footer {
+  color: white;
 }
 
 :root {
-  --page-size: 1600px;
+  --page-size: 1280px;
+  --color-main-transparent: rgba(17, 17, 17, 0.75);
+  ;
   --sub-color: #ccc;
   --gray-background: #f0f0f0;
   --gray-background-active: #c7c7c7;
   --url-image-minecraft-arena: "assets/img/minecraft-arena.png";
   --url: url("https://download.unsplash.com/photo-1420708392410-3c593b80d416");
   --color-main: #111;
+  --color-main-blue: #69e0ff;
 }
 
 .site-row {
@@ -52,20 +56,52 @@ main {
 
 .site-row-background {
   margin: 0 auto;
-
-  background-color: var(--gray-background);
 }
 
 .background-arena {
-  background-image: url("assets/img/muiecraft-arena.png");
+  position: relative;
+  overflow: hidden;
+}
+
+.background-arena:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  filter: blur(4px);
+  background-image: url("https://i.imgur.com/GUTseTO.jpg");
+  height: 100%;
+  width: 100%;
   background-position: center;
   background-size: cover;
+  display: block;
+  transform: scale(1.2);
+
+
 }
 
 .background-city {
-  background-image: url("assets/img/minecraft-city.png");
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.background-city:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  filter: blur(4px);
+  background-image: url("https://i.imgur.com/GUTseTO.jpg");
+  height: 100%;
+  width: 100%;
   background-position: center;
   background-size: cover;
+  display: block;
+  z-index: -1;
+  transform: scale(1.2);
+
+
 }
 
 .best-fit {
@@ -77,4 +113,23 @@ main {
 
 .big-pad {
   padding: 6em;
+  padding-top: 10em;
+}
+
+.middle {
+  text-align: center;
+}
+
+body::-webkit-scrollbar {
+  width: 0.0em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.3em grey;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-main-blue);
+  height: 10%;
+
 }

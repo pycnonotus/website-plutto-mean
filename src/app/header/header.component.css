@@ -4,8 +4,9 @@
 
 a {
   text-decoration: none;
-
+  color: #ccc;
   font-size: 1.0em;
+  font-weight: lighter;
 }
 
 ul li a {
@@ -30,7 +31,9 @@ mat-toolbar {
 
 }
 
-.unscrolled {}
+.unscrolled {
+  background-color: var(--color-main-transparent);
+}
 
 .sidenav-warp {
   display: flex;
@@ -55,4 +58,30 @@ mat-toolbar {
     display: none;
     z-index: 9999;
   }
+}
+
+
+
+.mat-primary {
+  color: white !important;
+  text-shadow: 0 0 10px #69e0ff,
+    0 0 20px #69e0ff,
+    0 0 40px #69e0ff;
+}
+
+.tab-line {
+  height: 5px;
+  position: relative;
+  background-color: var(--color-main-transparent);
+  ;
+}
+
+.line {
+
+  background-color: #69e0ff;
+  height: 5px;
+  position: absolute;
+  width: 100px;
+  left: 400px;
+  transition: all 0.2s ease-in-out 0s
 }

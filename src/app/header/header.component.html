@@ -1,4 +1,11 @@
-<mat-toolbar class="unscrolled" color="primary" [class.mat-elevation-z8]="true">
+<div class="tab-line">
+  <div
+    class="line"
+    [style.left]="leftX + 'px'"
+    [style.width]="leftWidth + 'px'"
+  ></div>
+</div>
+<mat-toolbar class="unscrolled" color="accent" [class.mat-elevation-z8]="true">
   <div class="sidenav-warp">
     <button
       hidden="true"
@@ -12,9 +19,11 @@
     <ul class="links-desktop">
       <li *ngFor="let cat of catagories">
         <a
-          mat-button
+          (click)="moveLine($event)"
+          (mouseover)="onHover($event)"
+          (mouseout)="onDeHover($event)"
           routerLink="{{ cat.path }}"
-          routerLinkActive="mat-accent"
+          routerLinkActive="mat-primary"
           [routerLinkActiveOptions]="{ exact: true }"
         >
           {{ cat.name }}
