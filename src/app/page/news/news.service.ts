@@ -12,15 +12,22 @@ export class NewsService {
   private newsUpdated = new Subject<{ data: News[]; message: string }>();
 
   constructor(private http: HttpClient, private router: Router) {}
-  addNews(title: string, category: number, htmlString: string) {
+  addNews(
+    title: string,
+    category: number,
+    htmlString: string,
+    imagePath: string,
+    subText: string
+  ) {
     console.log(title, category, htmlString);
 
     const newsData = new FormData();
     let data = {
       title,
-      imagePath: '',
+      imagePath: imagePath,
       text: htmlString,
       topic: category,
+      subText,
     };
 
     console.log(data);
@@ -52,6 +59,7 @@ export class NewsService {
       content: string;
       imagePath: string;
       category: number;
+      subText: string;
       date: Date;
     }>('http://localhost:3000/api/newsManger/' + id);
     console.log(ret);

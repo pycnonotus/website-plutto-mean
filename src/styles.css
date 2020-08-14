@@ -170,8 +170,7 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   height: 150px;
   width: 100%;
-  filter: blur(1px);
-  transform: scale(1.2);
+  
 
   background-image: url('assets/img/minecraft-bottom.png');
   background-position: top;

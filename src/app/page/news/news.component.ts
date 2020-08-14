@@ -10,6 +10,7 @@ import { NewsService } from './news.service';
 })
 export class NewsComponent implements OnInit {
   rawNews: News[] = [];
+  maxPosts = 3;
   private postsSubscription: Subscription;
   constructor(private news: NewsService) {}
 
@@ -28,5 +29,10 @@ export class NewsComponent implements OnInit {
       block: 'start',
       inline: 'nearest',
     });
+  }
+  increaseMaxPost(): void {
+    ++this.maxPosts;
+    ++this.maxPosts;
+    ++this.maxPosts;
   }
 }

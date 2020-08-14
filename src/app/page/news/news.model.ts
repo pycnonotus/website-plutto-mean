@@ -4,4 +4,5 @@ export interface News {
   imagePath: string;
   content: string;
   category: number;
+  subText: string;
 }

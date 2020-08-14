@@ -4,6 +4,8 @@
       routerLink="{{ '/news/' + n.id }}"
       *ngFor="let n of rawNews.slice(0, 3)"
       [title]="n.title"
+      [subText]="n.subText"
+      [imagePath]="n.imagePath"
       [class.mat-elevation-z2]="true"
     >
     </app-card>
@@ -18,15 +20,15 @@
   <div class="site-row">
     <br />
     <div>
-      <mat-card *ngFor="let n of rawNews.slice(3, rawNews.length - 3)">
+      <mat-card *ngFor="let n of rawNews.slice(3, 3 + maxPosts)">
         <app-mini-card routerLink="{{ '/news/' + n.id }}" [title]="n.title">
         </app-mini-card>
       </mat-card>
     </div>
   </div>
 
-  <div class="site-row load-more-wrap">
-    <button mat-button>
+  <div class="site-row load-more-wrap" *ngIf="maxPosts + 3 <= rawNews.length">
+    <button mat-button (click)="increaseMaxPost()">
       טען עוד
     </button>
   </div>
@@ -37,6 +39,7 @@
       [class.mat-elevation-z2]="true"
     >
     </app-card> -->
+
 <!-- <mat-card class="example-card" *ngFor="let n of rawNews">
   </mat-card> -->
 <!-- <mat-card-header>

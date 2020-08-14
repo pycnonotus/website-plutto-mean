@@ -40,6 +40,8 @@ export class AdminNewsCreateComponent implements OnInit {
       title: new FormControl(null, {}),
       category: new FormControl(null, {}),
       content: new FormControl(null, {}),
+      imagePath: new FormControl(null, {}),
+      subText: new FormControl(null, {}),
     });
   }
   onEditorChanged(event: EditorChangeContent | EditorChangeSelection): void {
@@ -50,10 +52,18 @@ export class AdminNewsCreateComponent implements OnInit {
       title: this.form.value.title,
       content: this.form.value.content,
       category: this.form.value.category,
+      imagePath: this.form.value.imagePath,
+      subText: this.form.value.subText,
     };
     console.log('====================================');
     console.log(newsPost);
     console.log('====================================');
-    this.news.addNews(newsPost.title, 2, newsPost.content);
+    this.news.addNews(
+      newsPost.title,
+      2,
+      newsPost.content,
+      newsPost.imagePath,
+      newsPost.subText
+    );
   }
 }
