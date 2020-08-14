@@ -21,7 +21,15 @@ export class HeaderComponent implements OnInit {
     { name: 'אודות', path: 'about' },
   ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      const btn = document.querySelector('.mat-primary');
+      if (btn) {
+        btn.dispatchEvent(new Event('click'));
+        (btn as any).click(); // idk why but  no click on element google plz fix
+      }
+    }, 1000);
+  }
 
   private getPosition(el) {
     console.dir(el);
