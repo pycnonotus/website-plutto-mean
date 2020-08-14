@@ -1,0 +1,24 @@
+<div class="background">
+  <div class="flex">
+    <div class="left">x</div>
+    <mat-spinner *ngIf="isLoading"> </mat-spinner>
+    <div class="center" *ngIf="!isLoading">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ title }}</mat-card-title>
+          <mat-card-subtitle> כללי </mat-card-subtitle>
+        </mat-card-header>
+        <div class="img-warp">
+          <img mat-card-image [src]="imagePath" alt="{{ title }}" />
+        </div>
+        <mat-card-content>
+          <p>
+            <span [innerHTML]="body"> </span>
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>

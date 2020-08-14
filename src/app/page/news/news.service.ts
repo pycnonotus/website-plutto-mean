@@ -45,4 +45,17 @@ export class NewsService {
   getNewsUpdatedListener() {
     return this.newsUpdated.asObservable();
   }
+  getNew(id: string) {
+    const ret = this.http.get<{
+      id: string;
+      title: string;
+      content: string;
+      imagePath: string;
+      category: number;
+      date: Date;
+    }>('http://localhost:3000/api/newsManger/' + id);
+    console.log(ret);
+
+    return ret;
+  }
 }

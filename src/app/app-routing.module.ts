@@ -14,6 +14,7 @@ import { AdminMainComponent } from './page/admin/admin-main/admin-main.component
 import { AdminNewsComponent } from './page/admin/admin-news/admin-news.component';
 import { AdminNewsCreateComponent } from './page/admin/admin-news/admin-news-create/admin-news-create.component';
 import { AdminNewsListComponent } from './page/admin/admin-news/admin-news-list/admin-news-list.component';
+import { NewsItemComponent } from './page/news/news-item/news-item.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
@@ -39,7 +40,7 @@ const routes: Routes = [
   },
   { path: 'login', component: LoginComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'news/:id', component: NewsComponent },
+  { path: 'news/:id', component: NewsItemComponent },
   {
     path: 'blop  ',
 

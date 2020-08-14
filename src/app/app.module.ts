@@ -54,6 +54,7 @@ import { MiniCardComponent } from './shared/mini-card/mini-card.component';
 import { FeatureItemComponent } from './shared/feature-item/feature-item.component';
 import { SharedFeatureDetailComponent } from './shared-feature-detail/shared-feature-detail.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NewsItemComponent } from './page/news/news-item/news-item.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MiniCardComponent,
     FeatureItemComponent,
     SharedFeatureDetailComponent,
+    NewsItemComponent,
   ],
   imports: [
     BrowserModule,

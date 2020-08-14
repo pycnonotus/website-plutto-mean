@@ -1,0 +1,53 @@
+:host {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.center {
+  flex-grow: 4;
+  max-width: var(--page-size);
+  height: 100%;
+
+
+}
+
+.background {
+  background-image: url("https://i.imgur.com/GUTseTO.jpg");
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  z-index: -1;
+  transform: scale(1.2);
+  overflow: hidden;
+}
+
+.flex {
+  margin-top: 8em;
+  justify-content: center;
+  height: 100%;
+}
+
+.left,
+.right {
+  flex-grow: 1;
+}
+
+.flex>div {
+  border: 1px solid pink;
+  height: 100%;
+}
+
+header {
+  overflow: hidden;
+  max-height: 250px;
+  width: 100%;
+  display: block;
+}
+
+header img {
+  width: 100%;
+}
