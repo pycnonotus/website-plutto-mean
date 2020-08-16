@@ -1,0 +1,31 @@
+:host {
+  --max-height: 600px;
+  max-width: var(--page-size);
+  text-align: center;
+}
+
+.site-row {
+  display: block;
+  width: 100%;
+  height: var(--max-height);
+  position: relative;
+  text-align: center;
+
+}
+
+.img-wrap {
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100%;
+  border: 2px solid pink;
+  overflow: hidden;
+  max-height: var(--max-height);
+  display: block;
+  position: absolute;
+  filter: blur(0.25em);
+
+}
+
+.img-wrap img {
+  width: 100%;
+}

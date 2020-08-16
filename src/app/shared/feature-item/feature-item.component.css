@@ -1,58 +1,87 @@
-:host {
-  background: white;
+.warp {
+  position: relative;
+  overflow: hidden;
+  background-color: red;
+  width: 270px;
+  height: 270px;
   display: inline-block;
-  padding: 0.5em 0.3em;
-  margin: 0.2em 0.2em;
-  width: 250px;
-  color: var(--color-main);
-  height: 75px;
-  box-shadow: 5px 5px 5px #aaaaaa;
+}
 
-
+:host {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.3em 0.3em;
+  width: 270px;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 :host:hover {
-  background-color: var(--color-main-blue);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 1);
 }
 
-:host.active {
-  box-shadow: none;
-  background-color: transparent;
+.imgWrap {
+  position: absolute;
+  display: block;
+
+  width: 270px;
+  height: 270px;
+  box-sizing: border-box;
+
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 img {
-  width: 75px;
-  height: 75px;
-  background-size: contain;
-  display: inline-block;
-
-  box-sizing: border-box;
-
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   z-index: 1;
-  display: inline-block;
-  height: 100%;
-  color: #393b40;
+  display: block;
+  height: 35%;
+  color: #fff;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 1);
 
   overflow: hidden;
-  width: calc(100% - 75px);
-
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   font-size: 1.2em;
+  padding: 0.5em;
   box-sizing: border-box;
+  backdrop-filter: blur(0.25em);
+}
+
+.title:hover {
+  /* height: 50%; */
 
 
 
 }
 
 .title>div {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  align-items: center;
-  height: 100%;
+  position: absolute;
+  top:
+    0;
+  width: 100%;
+  text-align: center;
+  right: 0;
+  padding: 0.5em;
 
 
+}
+
+.sub_text {
+  display: block;
+  font-size: 1rem;
+  color: #ccc;
 }

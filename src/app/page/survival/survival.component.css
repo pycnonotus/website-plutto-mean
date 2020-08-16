@@ -2,3 +2,9 @@
   text-align: center;
   color: white;
 }
+
+.spacer {
+  height: 1em;
+  display: block;
+  content: " ";
+}

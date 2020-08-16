@@ -1,8 +1,7 @@
 :host {
-  margin-top: -2em;
   background-color: #101d2f;
   background: rgb(16, 29, 47);
-  background: linear-gradient(0deg, rgba(16, 29, 47, 1) 0%, rgba(16, 29, 47, 1) 90%, rgba(0, 0, 0, 0) 100%);
+
   display: block;
   position: relative;
   z-index: 0;

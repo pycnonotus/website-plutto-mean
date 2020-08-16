@@ -7,12 +7,9 @@ body {
 
 
 html {
-  font-family: Roboto,
-    "Helvetica Neue",
-    sans-serif,
-    'Alef',
-    sans-serif;
-  ;
+  font-family: 'Heebo',
+    sans-serif !important;
+
 }
 
 body {
@@ -149,28 +146,20 @@ body::-webkit-scrollbar-thumb {
 
   display: block;
   position: relative;
-  height: 150px;
+  height: 250px;
   z-index: 2;
   overflow: hidden;
 }
 
-.before-foot:before {
-  display: block;
-  content: ' ';
-  z-index: 3;
-
-
-
-}
 
 .before-foot:after {
   display: block;
   content: ' ';
   z-index: 1;
   position: absolute;
-  height: 150px;
+  height: 250px;
   width: 100%;
-  
+
 
   background-image: url('assets/img/minecraft-bottom.png');
   background-position: top;

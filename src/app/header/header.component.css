@@ -6,7 +6,20 @@ a {
   text-decoration: none;
   color: #ccc;
   font-size: 1.0em;
-  font-weight: lighter;
+
+  font-style: lighter;
+  font-size: 1em;
+  font-family: 'Heebo',
+    sans-serif !important;
+  letter-spacing: 0.2 em;
+}
+
+ul li a:hover {
+    text-shadow: 0 0 10px #69e0ff,
+    0 0 20px #69e0ff,
+    0 0 40px #69e0ff;
+    color: white;
+
 }
 
 ul li a {
@@ -33,6 +46,7 @@ mat-toolbar {
 
 .unscrolled {
   background-color: var(--color-main-transparent);
+  backdrop-filter: blur(50px);
 }
 
 .sidenav-warp {
@@ -72,6 +86,7 @@ mat-toolbar {
 .tab-line {
   height: 5px;
   position: relative;
+  backdrop-filter: blur(50px);
   background-color: var(--color-main-transparent);
   ;
 }
@@ -79,9 +94,14 @@ mat-toolbar {
 .line {
 
   background-color: #69e0ff;
+   box-shadow:  0 0 10px #69e0ff,
+    0 0 20px #69e0ff,
+    0 0 40px #69e0ff;
   height: 5px;
   position: absolute;
   width: 100px;
   left: 400px;
-  transition: all 0.2s ease-in-out 0s
+  transition: all 0.2s ease-in-out 0s;
+  z-index: 98;
+  border-radius: 1em;
 }

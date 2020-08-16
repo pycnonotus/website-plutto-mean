@@ -61,7 +61,7 @@ export class NewsService {
       category: number;
       subText: string;
       date: Date;
-    }>('http://localhost:3000/api/newsManger/' + id);
+    }>('http://' + ipAddres + '/api/newsManger/' + id);
     console.log(ret);
 
     return ret;
