@@ -8,7 +8,7 @@ import { ShopItem } from './../../shop-item.model';
 })
 export class TopComponent implements OnInit {
     @Input() level = 0;
-    @Output() buying = new EventEmitter<ShopItem>();
+    @Output() buying = new EventEmitter<number>();
 
     @Input() buyCallbacks: (item: {
         price: number;
@@ -56,7 +56,11 @@ export class TopComponent implements OnInit {
             case 2:
                 return ['P2W', 'סמים', 'סמים', 'חשיש', 'ירק', 'עוגות ', 'P2W'];
             case 1:
-                return ['P2Lose', 'h20', 'מים'];
+                return [
+                    '5%	בונוס קריסטלים',
+                    'כותרת וי-אי-פי רמה 1',
+                    'קופסאות מזל וי-אי-פי 1',
+                ];
         }
     }
 
@@ -75,6 +79,6 @@ export class TopComponent implements OnInit {
     }
 
     buy(): void {
-        console.log('work');
+        this.buying.emit(this.level);
     }
 }

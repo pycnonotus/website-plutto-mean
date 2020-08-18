@@ -39,10 +39,11 @@ export class PayPaypalComponent implements OnInit {
                     });
                 },
                 onApprove: async (data, actions) => {
-                    // console.log(data);
-                    // console.log(actions);
+                    console.log(data);
+                    console.log(actions);
 
                     const order = await actions.order.capture();
+
                     console.log('====================================');
                     console.log(order);
                     console.log('====================================');
@@ -54,5 +55,3 @@ export class PayPaypalComponent implements OnInit {
             .render(this.paymentElement.nativeElement);
     }
 }
-
-

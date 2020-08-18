@@ -9,10 +9,24 @@
             כסףףף
         </h2>
         <ul>
-            <app-top [class.mat-elevation-z3]="true" [level]="1"></app-top>
-            <app-top [class.mat-elevation-z3]="true" class="import" [level]="2">
+            <app-top
+                (buying)="onBuy($event)"
+                [class.mat-elevation-z3]="true"
+                [level]="1"
+            ></app-top>
+            <app-top
+                (buying)="onBuy($event)"
+                [class.mat-elevation-z3]="true"
+                class="import"
+                [level]="2"
+            >
             </app-top>
-            <app-top [class.mat-elevation-z3]="true" [level]="3"> </app-top>
+            <app-top
+                (buying)="onBuy($event)"
+                [class.mat-elevation-z3]="true"
+                [level]="3"
+            >
+            </app-top>
         </ul>
         <button (click)="onBuy(1, 1, 1)">
             aaaa
@@ -26,4 +40,19 @@
     <br />
     <br />
 </div>
-<div class="step2" *ngIf="step === 2"></div>
+<div class="step2" *ngIf="step === 2" style="text-align: center;">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <form>
+        <mat-form-field>
+            <input matInput type="text" placeholder="minecraft username" />
+        </mat-form-field>
+        <button mat-button>
+            שלח
+        </button>
+    </form>
+</div>

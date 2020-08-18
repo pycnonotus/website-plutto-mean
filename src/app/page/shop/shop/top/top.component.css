@@ -1,6 +1,5 @@
 :host {
     --width: 350px;
-    background-color: #f6f6f6;
     margin: 0 01em;
 
     width: var(--width);
@@ -9,17 +8,27 @@
     color: var(--color-main);
     overflow-x: hidden;
     box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.3);
+
+
+
+    background: rgba(246, 246, 246, 1);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(246, 246, 246, 1) 10%, rgba(246, 246, 246, 1) 100%);
+
 }
+
+
 
 .fabric-blue {
     padding: 0.7em;
     font-size: 1.5em;
     text-align: center;
     background-image: url("/assets/img/bluc-fabric.png");
-    background-position: center;
+    background-position: top;
     background-size: cover;
     box-sizing: border-box;
     color: white;
+    background-color: transparent;
+    background-color: transparent;
 }
 
 .fabric-pink {
@@ -27,7 +36,7 @@
     font-size: 1.5em;
     text-align: center;
     background-image: url("/assets/img/pink-fabric.png");
-    background-position: center;
+    background-position: top;
     background-size: cover;
     box-sizing: border-box;
     color: white;
@@ -38,7 +47,7 @@
     font-size: 1.5em;
     text-align: center;
     background-image: url("/assets/img/gray-fabric.png");
-    background-position: center;
+    background-position: top;
     background-size: cover;
     box-sizing: border-box;
     color: white;
@@ -60,6 +69,8 @@
     padding: 0.5em;
     display: block;
 }
+
+.content {}
 
 .content li:hover {
     border-bottom: 2px solid var(--color-main-blue);
@@ -130,6 +141,7 @@ li:after {
     margin: 0 auto;
     width: 100%;
 }
+
 .sub-buy button {
     position: relative;
     display: block;
