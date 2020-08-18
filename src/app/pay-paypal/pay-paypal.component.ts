@@ -43,10 +43,6 @@ export class PayPaypalComponent implements OnInit {
                     console.log(actions);
 
                     const order = await actions.order.capture();
-
-                    console.log('====================================');
-                    console.log(order);
-                    console.log('====================================');
                 },
                 onError: (err) => {
                     console.log(err);

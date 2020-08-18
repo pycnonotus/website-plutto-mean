@@ -55,9 +55,7 @@ export class AdminNewsCreateComponent implements OnInit {
       imagePath: this.form.value.imagePath,
       subText: this.form.value.subText,
     };
-    console.log('====================================');
-    console.log(newsPost);
-    console.log('====================================');
+
     this.news.addNews(
       newsPost.title,
       2,

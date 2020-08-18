@@ -7,21 +7,19 @@ import { Survival } from './survival.model';
 const ipAddres = '85.65.61.221:3000'; //localhost:3000
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class SurvivalService {
-  private feature = new Subject<{ data: Survival[] }>();
-  constructor(private http: HttpClient, private router: Router) {}
-  loadFeature() {
-    console.log('i load');
-
-    this.http
-      .get<any>('http://' + ipAddres + '/api/featureManger')
-      .subscribe((responseData) => {
-        this.feature.next({ data: responseData.data });
-      });
-  }
-  getSurvivalSUpdatedListener() {
-    return this.feature.asObservable();
-  }
+    private feature = new Subject<{ data: Survival[] }>();
+    constructor(private http: HttpClient, private router: Router) {}
+    loadFeature() {
+        this.http
+            .get<any>('http://' + ipAddres + '/api/featureManger')
+            .subscribe((responseData) => {
+                this.feature.next({ data: responseData.data });
+            });
+    }
+    getSurvivalSUpdatedListener() {
+        return this.feature.asObservable();
+    }
 }

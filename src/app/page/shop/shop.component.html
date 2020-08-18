@@ -59,5 +59,10 @@
         <button mat-button (click)="onCheckUser()">
             שלח
         </button>
+        <div *ngIf="errorArray.length">
+            <p *ngFor="let error of errorArray">
+                {{ error }}
+            </p>
+        </div>
     </div>
 </div>
