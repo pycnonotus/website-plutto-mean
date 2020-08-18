@@ -47,12 +47,17 @@
     <br />
     <br />
     <br />
-    <form>
+    <div>
         <mat-form-field>
-            <input matInput type="text" placeholder="minecraft username" />
+            <input
+                matInput
+                type="text"
+                [(ngModel)]="minecraftName"
+                placeholder="minecraft username"
+            />
         </mat-form-field>
-        <button mat-button>
+        <button mat-button (click)="onCheckUser()">
             שלח
         </button>
-    </form>
+    </div>
 </div>

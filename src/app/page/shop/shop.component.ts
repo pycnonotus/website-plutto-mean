@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { error } from '@angular/compiler/src/util';
+
 import { Component, OnInit } from '@angular/core';
+const ipAddres = '85.65.61.221:3000'; //localhost:3000
 
 @Component({
     selector: 'app-shop',
@@ -23,20 +24,18 @@ export class ShopComponent implements OnInit {
         this.itemId = itemId;
     }
 
-    onCheckUser(minecraftName: string) {
+    onCheckUser() {
         let isInSQL = false;
         this.error = [];
         this.http
-            .get(
-                `https://api.mojang.com/users/profiles/minecraft/${this.minecraftName}`
-            )
-            .subscribe((response) => {
-                console.log(response);
-            });
-
-        if (!isInSQL) {
-            this.step = 2; // user is mot found
-            this.error.push(" can't fint this minecraft Name ");
-        }
+            .get(`http://` + ipAddres + `/api/pay/${this.minecraftName}`)
+            .subscribe(
+                (response) => {
+                    console.log(response);
+                },
+                (err) => {
+                    console.log(err);
+                }
+            );
     }
 }
