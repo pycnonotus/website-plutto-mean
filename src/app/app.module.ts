@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, NgForm } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,7 +47,7 @@ import { AdminNewsListComponent } from './page/admin/admin-news/admin-news-list/
 import { QuillModule } from 'ngx-quill';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CardComponent } from './shared/card/card.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MiniCardComponent } from './shared/mini-card/mini-card.component';
@@ -55,7 +55,10 @@ import { FeatureItemComponent } from './shared/feature-item/feature-item.compone
 import { SharedFeatureDetailComponent } from './shared-feature-detail/shared-feature-detail.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NewsItemComponent } from './page/news/news-item/news-item.component';
-
+import { AuthTokenInterceptor } from './auth-token.interceptor';
+import { TopComponent } from './page/shop/shop/top/top.component';
+import { ShopBuyComponent } from './page/shop/shop-buy/shop-buy.component';
+import { PayPaypalComponent } from './pay-paypal/pay-paypal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,6 +90,9 @@ import { NewsItemComponent } from './page/news/news-item/news-item.component';
     FeatureItemComponent,
     SharedFeatureDetailComponent,
     NewsItemComponent,
+    TopComponent,
+    ShopBuyComponent,
+    PayPaypalComponent,
   ],
   imports: [
     BrowserModule,
@@ -115,8 +121,11 @@ import { NewsItemComponent } from './page/news/news-item/news-item.component';
     HttpClientModule,
     MatChipsModule,
     MatProgressSpinnerModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

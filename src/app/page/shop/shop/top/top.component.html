@@ -1,0 +1,42 @@
+<li class="main-li">
+    <div>
+        <div class="top">
+            <div class="{{ getStleeClass() }}">
+                <strong>
+                    {{ getTitle() }}
+                </strong>
+                <hr class="style-two" />
+                <div class="sub-image">
+                    <div class="imgWrap">
+                        <img src="/assets/img/GoldOreNew.png" />
+                    </div>
+                    <div class="buy">
+                        <div class="sub-buy">
+                            <div>{{ price[level] }} $</div>
+                            <div>
+                                <button (click)="buy()">
+                                    לקניה
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sale-image"></div>
+    </div>
+    <div class="content">
+        <ul>
+            <li *ngFor="let item of getSubList()">
+                {{ item }}
+            </li>
+        </ul>
+    </div>
+    <div></div>
+</li>
+<div class="btn btn-buy">
+    <button (click)="buy()" mat-raised-button color="primary" class="">
+        קניה
+    </button>
+</div>

@@ -15,17 +15,21 @@ import { AdminNewsComponent } from './page/admin/admin-news/admin-news.component
 import { AdminNewsCreateComponent } from './page/admin/admin-news/admin-news-create/admin-news-create.component';
 import { AdminNewsListComponent } from './page/admin/admin-news/admin-news-list/admin-news-list.component';
 import { NewsItemComponent } from './page/news/news-item/news-item.component';
+import { AuthGuard } from './auth.guard';
+import { ShopBuyComponent } from './page/shop/shop-buy/shop-buy.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'shop', component: ShopComponent },
+  { path: 'buy', component: ShopBuyComponent },
   { path: 'support', component: SupportComponent },
   { path: 'minigames', component: MinigameComponent },
   { path: 'survival', component: SurvivalComponent },
   {
     path: 'admin',
     component: AdminComponent,
-
+    canActivate: [AuthGuard],
     children: [
       { path: 'main', component: AdminMainComponent },
       {
@@ -41,19 +45,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'news', component: NewsComponent },
   { path: 'news/:id', component: NewsItemComponent },
-  {
-    path: 'blop  ',
-
-    component: SubVideoComponent,
-    outlet: 'sub-header',
-  },
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
   ],
-
+  providers: [AuthGuard],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

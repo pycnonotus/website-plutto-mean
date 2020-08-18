@@ -10,6 +10,7 @@ import {
 
 import { Subscription } from 'rxjs';
 import { MainService } from './main.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -21,17 +22,23 @@ export class AppComponent implements OnInit, OnDestroy {
   loading = true;
   showSubVideos = false;
   videoSubs: Subscription;
-  constructor(public mainService: MainService, private router: Router) {
+  constructor(
+    public mainService: MainService,
+    private router: Router,
+    private auth: AuthService
+  ) {
     this.router.events.subscribe((e: RouterEvent) => {
       this.navigationInterceptor(e);
     });
   }
   ngOnInit() {
+    this.auth.autoAuthUser();
     this.videoSubs = this.mainService.getVideoListener().subscribe((bool) => {
       this.showSubVideos = bool;
     });
   }
   ngOnDestroy() {
+    //TODO : is this really needed?
     this.videoSubs.unsubscribe();
   }
   navigationInterceptor(event: RouterEvent): void {

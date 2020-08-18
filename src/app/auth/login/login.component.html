@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="site-row">
+  <mat-card>
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+      <div>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="שם"
+            name="username"
+            ngModel
+            #emailInput="ngModel"
+          />
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <input
+          type="password"
+          matInput
+          placeholder="סיסמא"
+          name="password"
+          ngModel
+          #emailInput="ngModel"
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button>login</button>
+      </div>
+    </form>
+  </mat-card>
+</div>

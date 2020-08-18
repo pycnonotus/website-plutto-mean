@@ -2,17 +2,18 @@
   position: relative;
   overflow: hidden;
   background-color: red;
-  width: 270px;
-  height: 270px;
+  width: var(--size);
+  height: var(--size);
   display: inline-block;
 }
 
 :host {
+  --size: 220px;
   display: inline-block;
   box-sizing: border-box;
   margin: 0.3em 0.3em;
-  width: 270px;
-  height: 270px;
+  width: var(--size);
+  height: var(--size);
   overflow: hidden;
   border-radius: 2px;
   cursor: pointer;

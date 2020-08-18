@@ -1,1 +1,29 @@
-<p>shop works!</p>
+<div class="head step1" *ngIf="step === 1">
+    <div></div>
+    <div class="bc-img"></div>
+    <div class="fr-text">
+        <h1>
+            חנות המשחק
+        </h1>
+        <h2>
+            כסףףף
+        </h2>
+        <ul>
+            <app-top [class.mat-elevation-z3]="true" [level]="1"></app-top>
+            <app-top [class.mat-elevation-z3]="true" class="import" [level]="2">
+            </app-top>
+            <app-top [class.mat-elevation-z3]="true" [level]="3"> </app-top>
+        </ul>
+        <button (click)="onBuy(1, 1, 1)">
+            aaaa
+        </button>
+        <h1>
+            {{ step }}
+        </h1>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+<div class="step2" *ngIf="step === 2"></div>

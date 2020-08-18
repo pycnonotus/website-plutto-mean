@@ -1,0 +1,74 @@
+.head {
+  margin: 0em 0em;
+  color: white;
+  position: relative;
+  z-index: 3;
+
+}
+
+.bc-img {
+  position: absolute;
+  position: absolute;
+  top: 0;
+  height: 600px;
+  filter: blur(0.2em);
+  overflow: hidden !important;
+  width: 100%;
+
+
+  z-index: 0;
+
+  background-position: top;
+  background-size: cover;
+}
+
+.bc-img:after {
+  content: ' ';
+  position: absolute;
+  position: absolute;
+  top: 0;
+  height: 600px;
+  filter: blur(0.5em);
+  overflow: hidden !important;
+  transform: scale(1.2);
+  width: 110%;
+  z-index: 0;
+  background-image: url('https://wallpaperaccess.com/full/37454.jpg');
+  background-position: top;
+  background-size: cover;
+}
+
+.fr-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 4em;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 2em;
+}
+
+li,
+ol,
+ul {
+  list-style: none;
+}
+
+app-top {
+  transition: 10.4s;
+  position: relative;
+
+}
+
+app-top:hover {
+  top: -20px;
+}
+
+.import {}
+
