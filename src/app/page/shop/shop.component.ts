@@ -15,15 +15,9 @@ export class ShopComponent implements OnInit {
     buyCart: { price: number; quantity: number; id: number }[] = [];
     constructor(private http: HttpClient) {}
 
-    ngOnInit(): void {
-        console.log('==00=');
-        console.log(this.step);
-        console.log('=00');
-    }
+    ngOnInit(): void {}
 
     onBuy(itemId: number): void {
-        console.log(' work3');
-
         this.step = 2;
         this.buyCart = [];
         this.itemId = itemId;
