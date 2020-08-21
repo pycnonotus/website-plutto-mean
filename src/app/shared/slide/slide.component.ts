@@ -36,7 +36,7 @@ export class SlideComponent implements OnInit {
         event.preventDefault();
         const x = event.pageX - this.slider.nativeElement.offsetLeft;
         const moveBy = this.startX - x;
-        this.slider.nativeElement.scrollLeft -= moveBy * 0.25;
+        this.slider.nativeElement.scrollLeft -= moveBy * 0.05;
     }
     onMouseLeave() {
         this.mouseNoneActive();
