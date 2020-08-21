@@ -1,8 +1,8 @@
 .slider-body {
-    background-color: pink;
+
     padding: 2em;
     touch-action: pan-y;
-    overflow: scroll
+    overflow: hidden
 }
 
 .scroll {
@@ -13,10 +13,17 @@
 .item {
     box-sizing: border-box;
     width: 400px;
-    height: 550px;
+    height: 400px;
     content: " ";
     display: inline-block;
     background-color: white;
     margin: 1em;
+    transition: transform .5s,
+        opacity .5s,
+        z-index .5s;
 
+}
+
+.active {
+    cursor: grab;
 }

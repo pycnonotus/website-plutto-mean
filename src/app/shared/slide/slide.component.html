@@ -1,4 +1,11 @@
-<div class="slider-body" (mousedown)="isMousePress = true">
+<div
+    class="slider-body"
+    (mousedown)="onMouseDown($event)"
+    (mouseup)="onMouseUp()"
+    (mousemove)="onMouseMove($event)"
+    (mouseleave)="onMouseLeave()"
+    #sliderBody
+>
     <div class="scroll">
         <div class="item">blop</div>
         <div class="item">blop</div>
