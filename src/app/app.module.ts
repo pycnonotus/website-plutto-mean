@@ -61,7 +61,6 @@ import { ShopBuyComponent } from './page/shop/shop-buy/shop-buy.component';
 import { PayPaypalComponent } from './pay-paypal/pay-paypal.component';
 import { UserCheckDialogComponent } from './shared/user-check-dialog/user-check-dialog.component';
 import { SlideComponent } from './shared/slide/slide.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
     declarations: [
@@ -128,7 +127,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
         MatChipsModule,
         MatProgressSpinnerModule,
         FormsModule,
-        SlickCarouselModule,
     ],
     providers: [
         {
