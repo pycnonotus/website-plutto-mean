@@ -15,6 +15,7 @@ export class ShopComponent implements OnInit, OnDestroy {
     itemId = 0;
     errorArray: string[] = [];
     minecraftName = '';
+    minecraftUuid: string;
     buyCart: { price: number; quantity: number; id: number }[] = [];
     constructor(private http: HttpClient, public dialog: MatDialog) {}
 
@@ -33,35 +34,16 @@ export class ShopComponent implements OnInit, OnDestroy {
         dialogRef.afterClosed().subscribe((result) => {
             console.log('The dialog was closed');
             console.log(result);
+            if (result.verified) {
+                this.step = 3;
+            } else {
+                this.step = 1;
+                this.itemId = 0;
+            }
         });
     }
 
-    onCheckUser() {
-        if (this.minecraftName.trim() === '') {
-            this.errorArray = ['תכניס שם'];
-            return;
-        }
-        let isInSQL = false;
-        this.errorArray = [];
-        this.http
-            .get(`http://` + ipAddres + `/api/pay/${this.minecraftName}`)
-            .subscribe(
-                (response) => {
-                    this.step = 3;
-                },
-                (err) => {
-                    if (err.status === 401) {
-                        this.errorArray.push('עליך להתחבר לפחות פעם אחת לשרת');
-                    } else if (err.status === 404) {
-                        this.errorArray.push('אין שחקן כזה');
-                    } else if (err.status === 400) {
-                        this.errorArray.push('שם לא תקין');
-                    } else {
-                        this.errorArray.push('אין גישה לשרת');
-                    }
-                }
-            );
-    }
+    
     ngOnDestroy() {
         //TODO: add some logic here?
     }

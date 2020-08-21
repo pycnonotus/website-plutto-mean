@@ -1,0 +1,74 @@
+.video-wrap {
+    height: 100%;
+    max-height: 700px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.video-wrap video {
+    z-index: 2;
+    position: relative;
+    top: -200px;
+}
+
+.video-wrap .content {
+    z-index: 4;
+    position: absolute;
+
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content > div {
+    padding-top: 70px;
+    align-self: center;
+    width: 100%;
+}
+
+.texter {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: "Amatic SC", cursive;
+    font-size: 2em;
+    font-weight: bolder;
+    letter-spacing: 0.2em;
+}
+
+.bg-imag {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    background-image: url("/assets/img/backgound/bg-al.png");
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px -10px 100px #000000;
+}
+
+.scroll-icon {
+    text-align: center;
+    color: white;
+    margin: 1em 1em;
+    bottom: 0;
+    position: relative;
+    animation: scroll-animation 0.5s infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes scroll-animation {
+    from {
+        bottom: 0;
+    }
+
+    to {
+        bottom: 0.05em;
+    }
+}

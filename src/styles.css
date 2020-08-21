@@ -2,19 +2,19 @@
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 
 
 html {
-  font-family: 'Heebo',
-    sans-serif !important;
+    font-family: 'Heebo',
+        sans-serif !important;
 
 }
 
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
 
 }
 
@@ -23,152 +23,165 @@ body {
 
 
 header {
-  direction: rtl;
+    direction: rtl;
 }
 
 main {
-  z-index: 4;
+    z-index: 4;
 }
 
 
 footer {
-  color: white;
+    color: white;
 }
 
 :root {
-  --page-size: 1280px;
-  --color-main-transparent: rgba(17, 17, 17, 0.75);
-  ;
-  --sub-color: #ccc;
-  --gray-background: #f0f0f0;
-  --gray-background-active: #c7c7c7;
-  --url-image-minecraft-arena: "assets/img/minecraft-arena.png";
-  --url: url("https://download.unsplash.com/photo-1420708392410-3c593b80d416");
-  --color-main: #111;
-  --color-main-blue: #69e0ff;
+    --page-size: 1280px;
+    --color-main-transparent: rgba(17, 17, 17, 0.75);
+    ;
+    --sub-color: #ccc;
+    --gray-background: #f0f0f0;
+    --gray-background-active: #c7c7c7;
+    --url-image-minecraft-arena: "assets/img/minecraft-arena.png";
+    --url: url("https://download.unsplash.com/photo-1420708392410-3c593b80d416");
+    --color-main: #111;
+    --color-main-blue: #69e0ff;
 }
 
 .site-row {
-  max-width: var(--page-size);
-  margin: 0 auto;
-  padding: 1em;
+    max-width: var(--page-size);
+    margin: 0 auto;
+    padding: 1em;
 }
 
 .site-row-background {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .background-arena {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .background-arena:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  filter: blur(4px);
-  background-image: url("https://i.imgur.com/GUTseTO.jpg");
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  display: block;
-  transform: scale(1.2);
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    filter: blur(4px);
+    background-image: url("https://i.imgur.com/GUTseTO.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    transform: scale(1.2);
 
 
 }
 
 .background-city {
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .background-city:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  filter: blur(4px);
-  background-image: url("https://i.imgur.com/GUTseTO.jpg");
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  display: block;
-  z-index: -1;
-  transform: scale(1.2);
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    filter: blur(4px);
+    background-image: url("https://i.imgur.com/GUTseTO.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    z-index: -1;
+    transform: scale(1.2);
 
 
 }
 
 .best-fit {
-  background-position: center;
-  background-size: cover;
+    background-position: center;
+    background-size: cover;
 }
 
 
 
 .big-pad {
-  padding: 6em;
-  padding-top: 10em;
+    padding: 6em;
+    padding-top: 10em;
 }
 
 .middle {
-  text-align: center;
+    text-align: center;
 }
 
 body {
-  background-color: var(--gray-background);
+    background-color: var(--gray-background);
 }
 
 body::-webkit-scrollbar {
-  width: 0.4em;
+    width: 0.4em;
 }
 
 body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 0.3em rgba(202, 200, 200, 0.212);
+    box-shadow: inset 0 0 0.3em rgba(202, 200, 200, 0.212);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--color-main-transparent);
-  height: 10%;
+    background-color: var(--color-main-transparent);
+    height: 10%;
 
 }
 
 .flex {
-  display: flex;
+    display: flex;
 }
 
 .before-foot {
 
-  display: block;
-  position: relative;
-  height: 250px;
-  z-index: 2;
-  overflow: hidden;
+    display: block;
+    position: relative;
+    height: 250px;
+    z-index: 2;
+    overflow: hidden;
 }
 
 
 .before-foot:after {
-  display: block;
-  content: ' ';
-  z-index: 1;
-  position: absolute;
-  height: 250px;
-  width: 100%;
+    display: block;
+    content: ' ';
+    z-index: 1;
+    position: absolute;
+    height: 250px;
+    width: 100%;
 
 
-  background-image: url('assets/img/minecraft-bottom.png');
-  background-position: top;
-  background-size: cover;
+    background-image: url('assets/img/minecraft-bottom.png');
+    background-position: top;
+    background-size: cover;
 
 }
 
 hr.style-two {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+}
+
+.fake-hr-line-1 {
+    border: 0;
+    content: " xxx";
+    height: 54px;
+    background-image: url('/assets/img/lines/line-1.png');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0.5em auto;
+    width: 80%;
+    background-position: center;
+    background-size: fit;
 }

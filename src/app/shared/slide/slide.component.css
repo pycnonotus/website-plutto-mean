@@ -1,0 +1,22 @@
+.slider-body {
+    background-color: pink;
+    padding: 2em;
+    touch-action: pan-y;
+    overflow: scroll
+}
+
+.scroll {
+    white-space: nowrap;
+
+}
+
+.item {
+    box-sizing: border-box;
+    width: 400px;
+    height: 550px;
+    content: " ";
+    display: inline-block;
+    background-color: white;
+    margin: 1em;
+
+}

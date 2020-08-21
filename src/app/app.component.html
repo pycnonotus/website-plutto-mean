@@ -1,18 +1,18 @@
 <div class="loading-overlay" *ngIf="loading">
-  <mat-spinner></mat-spinner>
+    <mat-spinner></mat-spinner>
 </div>
 
 <header class="">
-  <app-header></app-header>
+    <app-header></app-header>
 </header>
-<app-sub-video dir="rtl" *ngIf="showSubVideos"></app-sub-video>
+
 <main>
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </main>
 <div>
-  <footer>
-    <div class="before-foot"></div>
+    <footer>
+        <div class="before-foot"></div>
 
-    <app-footer></app-footer>
-  </footer>
+        <app-footer></app-footer>
+    </footer>
 </div>

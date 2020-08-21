@@ -1,107 +1,106 @@
 .example-spacer {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 a {
-  text-decoration: none;
-  color: #ccc;
-  font-size: 1.0em;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1em;
 
-  font-style: lighter;
-  font-size: 1em;
-  font-family: 'Heebo',
-    sans-serif !important;
-  letter-spacing: 0.2 em;
+    font-style: lighter;
+    font-size: 1em;
+    font-family: "Heebo", sans-serif !important;
+    letter-spacing: 0.2 em;
 }
 
 ul li a:hover {
-  text-shadow: 0 0 10px #69e0ff,
-    0 0 20px #69e0ff,
-    0 0 40px #69e0ff;
-  color: white;
-
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: white;
 }
 
 ul li a {
-  padding: 0 1em;
-  display: inline-block
+    padding: 0 1em;
+    display: inline-block;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .spacer {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 mat-toolbar {
-  position: sticky;
-
-
+    position: sticky;
 }
 
 .unscrolled {
-  background-color: var(--color-main-transparent);
-  backdrop-filter: blur(5px);
+    background-color: var(--color-main-transparent);
+    backdrop-filter: blur(5px);
 }
 
 .sidenav-warp {
-  display: flex;
-  width: var(--page-size);
-  margin: 0 auto;
+    display: flex;
+    width: var(--page-size);
+    margin: 0 auto;
 }
 
-
+.logo {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 100px;
+}
+.logo li {
+  width: 100px;
+  display: block;
+}
+.logo li img{
+  width:100%;
+}
 
 .links-mobile {
-  display: none;
+    display: none;
 }
 
 @media only screen and (min-width: 1000px) {
-  app-main-nav {
-    display: none;
-  }
+    app-main-nav {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
-  mat-toolbar {
-    display: none;
-    z-index: 9999;
-  }
+    mat-toolbar {
+        display: none;
+        z-index: 9999;
+    }
 }
 
-
-
 .mat-primary {
-  color: white !important;
-  text-shadow: 0 0 10px #69e0ff,
-    0 0 20px #69e0ff,
-    0 0 40px #69e0ff;
+    color: white !important;
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
 }
 
 .tab-line {
-  height: 5px;
-  position: relative;
-  backdrop-filter: blur(50px);
-  background-color: var(--color-main-transparent);
-  ;
+    height: 5px;
+    position: relative;
+    backdrop-filter: blur(50px);
+    background-color: var(--color-main-transparent);
 }
 
 .line {
-
-  background-color: #69e0ff;
-  box-shadow: 0 0 10px #69e0ff,
-    0 0 20px #69e0ff,
-    0 0 40px #69e0ff;
-  height: 5px;
-  position: absolute;
-  width: 100px;
-  left: 400px;
-  transition: all 0.2s ease-in-out 0s;
-  z-index: 98;
-  border-radius: 1em;
+    background-color: #69e0ff;
+    box-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    height: 5px;
+    position: absolute;
+    width: 100px;
+    left: 400px;
+    transition: all 0.2s ease-in-out 0s;
+    z-index: 98;
+    border-radius: 1em;
 }

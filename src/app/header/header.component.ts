@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   savedX = 0;
   savedWidth = 0;
   public catagories: { name: string; path: any }[] = [
+    { name: 'דף הבית', path: '' },
     { name: 'חדשות', path: 'news' },
     { name: 'עולם הסרביבל', path: 'survival' },
     { name: 'עולם המיני-גיימס', path: 'minigames' },
