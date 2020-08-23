@@ -1,8 +1,16 @@
+:host {
+    position: relative;
+    display: block;
+}
+
 .slider-body {
 
     padding: 2em;
     touch-action: pan-y;
-    overflow: hidden
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    scroll-behavior: smooth;
 }
 
 .scroll {
@@ -15,7 +23,7 @@
 .item {
     box-sizing: border-box;
     width: 400px;
-    height: 400px;
+    height: 500px;
     content: " ";
     display: inline-block;
     background-color: white;
@@ -29,4 +37,56 @@
 
 .active {
     cursor: grab;
+}
+
+.left,
+.right {
+    cursor: pointer;
+    z-index: 1000;
+    background: rgb(0, 0, 0, 0.4);
+    color: white;
+}
+
+
+.btn-wrap {
+
+
+    position: absolute;
+    width: 100%;
+    right: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.btn-sub-wrap {
+    position: relative;
+    width: 100vw;
+    display: block;
+    box-sizing: border-box;
+    height: 37px;
+
+
+}
+
+.right {
+    position: absolute;
+    right: 0;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+
+
+}
+
+.item.active {
+    position: relative;
+    top: -2em;
 }

@@ -61,6 +61,7 @@ import { ShopBuyComponent } from './page/shop/shop-buy/shop-buy.component';
 import { PayPaypalComponent } from './pay-paypal/pay-paypal.component';
 import { UserCheckDialogComponent } from './shared/user-check-dialog/user-check-dialog.component';
 import { SlideComponent } from './shared/slide/slide.component';
+import { SliedItemComponent } from './shared/slide/slied-item/slied-item.component';
 
 @NgModule({
     declarations: [
@@ -98,6 +99,7 @@ import { SlideComponent } from './shared/slide/slide.component';
         PayPaypalComponent,
         UserCheckDialogComponent,
         SlideComponent,
+        SliedItemComponent,
     ],
     imports: [
         BrowserModule,

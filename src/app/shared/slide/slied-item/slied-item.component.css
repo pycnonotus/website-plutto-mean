@@ -1,0 +1,31 @@
+.content {
+    margin: 2em;
+}
+
+.imgWrap {
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    bottom: 0;
+}
+
+img {
+    z-index: 5;
+}
+
+h1.active {
+    color: #00cbfd;
+}
+
+span {
+    color: #363636;
+    font-weight: linear;
+    font-size: 0.8rem;
+}
