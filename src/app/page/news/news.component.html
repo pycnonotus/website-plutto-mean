@@ -9,8 +9,29 @@
 <div class="site-row-background" #allNewDIv>
     <div class="site-row">
         <br />
+
+        <div style="color: white; text-align: right;">
+            <ng-container *ngFor="let p of getPriority; let i = index">
+                <button
+                    mat-button
+                    *ngIf="!typeFilter[i]"
+                    (click)="typeFilter[i] = true"
+                >
+                    <div>{{ p.key }}</div>
+                </button>
+                <button
+                    mat-button
+                    *ngIf="typeFilter[i]"
+                    mat-flat-button
+                    (click)="typeFilter[i] = false"
+                    color="primary"
+                >
+                    <div>{{ p.key }}</div>
+                </button>
+            </ng-container>
+        </div>
         <div>
-            <mat-card *ngFor="let n of rawNews.slice(0, 0 + maxPosts)">
+            <mat-card *ngFor="let n of rawNews.slice(0, 3 + maxPosts)">
                 <app-mini-card
                     routerLink="{{ '/news/' + n.id }}"
                     [title]="n.title"

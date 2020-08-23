@@ -1,15 +1,13 @@
 :host {
     text-align: right;
     margin: 0.5em auto;
+    position: relative;
 }
 
-
-
-
-.text {}
+.text {
+}
 
 .text {
-
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -18,25 +16,39 @@
 
     text-decoration: none;
     overflow: hidden;
-    width: calc(100% - 285px);
+
     box-sizing: border-box;
     padding: 1em 1em;
     margin-bottom: auto;
-
 }
 
 img {
-    background-size: 100% 100%;
-
+    width: 100%;
+    height: 200px;
 }
 
-.date {}
+.date {
+    position: absolute;
+    bottom: 0;
+}
 
 .imgWrap {
-    width: 592px;
-    height: 342px;
+    height: auto;
+    width: 300px;
+    height: 200px;
+    position: relative;
     overflow: hidden;
-    object-fit: cover;
+}
 
-
+.imgWrap:before {
+    content: " ";
+    background-image: url("/assets/img/lines/line-left-2.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 10px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
 }

@@ -67,10 +67,10 @@ export class SlideComponent implements OnInit {
         setTimeout(() => {
             this.timeOut = false;
         }, 300);
-        if (this.active > 3) {
+        if (this.active > 0) {
             // this.rigth = px;
             this.slider.nativeElement.scrollLeft =
-                this.leftest + (this.newsRaw.length - this.active) * 432;
+                this.leftest + (this.newsRaw.length - this.active) * 432 + 200;
         } else {
             this.slider.nativeElement.scrollLeft =
                 this.leftest + this.newsRaw.length * 432;

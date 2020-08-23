@@ -76,7 +76,6 @@ li {
     display: inline-block;
     text-indent: -9999px;
     vertical-align: top;
-    filter: invert(1);
 
 }
 
@@ -88,7 +87,6 @@ li {
     height: 30px;
     display: inline-block;
     text-indent: -9999px;
-    filter: invert(1);
 
     vertical-align: top;
 }
@@ -102,6 +100,20 @@ li {
     display: inline-block;
     text-indent: -9999px;
     vertical-align: top;
+
+}
+
+.youtube,
+.discord,
+.twitch {
+    filter: invert(0.5);
+
+}
+
+
+.youtube:hover,
+.discord:hover,
+.twitch:hover {
     filter: invert(1);
 
 }

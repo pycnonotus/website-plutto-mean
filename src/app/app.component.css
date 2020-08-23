@@ -1,38 +1,36 @@
-main {
-  min-height: 100%;
-}
+main {}
 
 header {
-  position: fixed;
-  margin: 0 auto;
-  top: 0;
-  z-index: 9999;
-  width: 100%;
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
 
 }
 
 app-sub-video {
-  box-sizing: border-box;
-  width: 100%;
-  height: calc(100%);
-  display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100%);
+    display: block;
 
 }
 
 app-header {
 
-  display: block;
-  width: 100%;
-  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35)
+    display: block;
+    width: 100%;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35)
 }
 
 app-support {
-  height: 100%;
-  display: block;
-  background-color: red;
+    height: 100%;
+    display: block;
+    background-color: red;
 }
 
 router-outlet {
-  height: 100%;
-  display: block;
+    height: 100%;
+    display: block;
 }
