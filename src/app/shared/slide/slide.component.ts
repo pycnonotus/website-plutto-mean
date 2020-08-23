@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { News } from 'src/app/page/news/news.model';
 
 @Component({
     selector: 'app-slide',
@@ -11,12 +12,14 @@ export class SlideComponent implements OnInit {
     startX = 0;
     scrollLeft = 0;
     rigth = 0;
-    active = 3;
+    active = 1;
     timeOut = false;
+    leftest = 0;
+    @Input() newsRaw: News[];
     @ViewChild('sliderBody', { static: true }) slider: ElementRef;
     ngOnInit(): void {
-        this.slider.nativeElement.scrollLeft += 432 * -2;
-        this.active = 3;
+        // this.slider.nativeElement.scrollLeft += 432 * -2;
+        this.leftest = this.slider.nativeElement.scrollLeft;
     }
 
     onMouseDown(ev) {
@@ -54,8 +57,8 @@ export class SlideComponent implements OnInit {
             }
         } else {
             this.active++;
-            if (this.active > 12) {
-                this.active = 12;
+            if (this.active > this.newsRaw.length) {
+                this.active = this.newsRaw.length;
                 return;
             }
         }
@@ -65,8 +68,13 @@ export class SlideComponent implements OnInit {
             this.timeOut = false;
         }, 300);
         if (this.active > 3) {
-            this.rigth = px;
-            this.slider.nativeElement.scrollLeft += px;
+            // this.rigth = px;
+            this.slider.nativeElement.scrollLeft =
+                this.leftest + (this.newsRaw.length - this.active) * 432;
+        } else {
+            this.slider.nativeElement.scrollLeft =
+                this.leftest + this.newsRaw.length * 432;
         }
+        console.log(this.slider.nativeElement.scrollLeft);
     }
 }
