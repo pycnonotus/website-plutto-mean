@@ -2,14 +2,22 @@
     <div class="btn-wrap">
         <div class="btn-sub-wrap">
             <div class="left">
-                <button mat-button (click)="moveLeft(-432)">
+                <button
+                    mat-button
+                    (click)="moveLeft(-432)"
+                    [disabled]="active >= 12"
+                >
                     <mat-icon>
                         keyboard_arrow_left
                     </mat-icon>
                 </button>
             </div>
-            <div class="right" mat-button (click)="moveLeft(432)">
-                <button mat-button>
+            <div class="right">
+                <button
+                    mat-button
+                    (click)="moveLeft(432)"
+                    [disabled]="!(active > 1)"
+                >
                     <mat-icon>
                         keyboard_arrow_right
                     </mat-icon>
@@ -19,6 +27,12 @@
     </div>
     <div class="slider-body" #sliderBody>
         <div class="scroll">
+            <div class="item sudo">
+                <app-slied-item></app-slied-item>
+            </div>
+            <div class="item sudo">
+                <app-slied-item></app-slied-item>
+            </div>
             <div class="item">
                 <app-slied-item></app-slied-item>
             </div>
@@ -53,6 +67,12 @@
                 <app-slied-item></app-slied-item>
             </div>
             <div class="item">
+                <app-slied-item></app-slied-item>
+            </div>
+            <div class="item sudo">
+                <app-slied-item></app-slied-item>
+            </div>
+            <div class="item sudo">
                 <app-slied-item></app-slied-item>
             </div>
         </div>

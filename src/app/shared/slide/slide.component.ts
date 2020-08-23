@@ -11,8 +11,12 @@ export class SlideComponent implements OnInit {
     startX = 0;
     scrollLeft = 0;
     rigth = 0;
+    active = 3;
     @ViewChild('sliderBody', { static: true }) slider: ElementRef;
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.slider.nativeElement.scrollLeft += 432 * -2;
+        this.active = 3;
+    }
 
     onMouseDown(ev) {
         this.isMousePress = true;
@@ -40,12 +44,22 @@ export class SlideComponent implements OnInit {
         this.slider.nativeElement.classList.remove('active');
     }
     moveLeft(px: number): void {
+        if (px > 0) {
+            // TODO change this logic
+            this.active--;
+            if (this.active <= 0) {
+                this.active = 1;
+                return;
+            }
+        } else {
+            this.active++;
+            if (this.active > 12) {
+                this.active = 12;
+                return;
+            }
+        }
+
         this.rigth = px;
         this.slider.nativeElement.scrollLeft += px;
-        let left = this.slider.nativeElement.scrollLeft;
-        let x = this.slider.nativeElement.querySelector('.btn-sub-wrap');
-        console.log(left);
-
-        console.log(x);
     }
 }

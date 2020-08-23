@@ -5,7 +5,8 @@
 
 .slider-body {
 
-    padding: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
     touch-action: pan-y;
     overflow: hidden;
     position: relative;
@@ -35,9 +36,7 @@
 
 }
 
-.active {
-    cursor: grab;
-}
+.active {}
 
 .left,
 .right {
@@ -89,4 +88,8 @@
 .item.active {
     position: relative;
     top: -2em;
+}
+
+.sudo {
+    visibility: hidden;
 }
