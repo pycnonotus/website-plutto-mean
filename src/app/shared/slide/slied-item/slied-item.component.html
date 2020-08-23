@@ -1,12 +1,14 @@
-<div class="imgWrap">
-    <img src="{{ imgSrc }}" alt="" />
+<div class="imgWrap"   >
+    <img src="{{ imgSrc }}" alt="{{ title }}" />
     <img src="/assets/img/lines/line-top-2.png" class="line" />
 </div>
 <div class="content">
     <h1 class="{{ isActive ? 'active' : '' }}">
-        סקס סמים ורוק אנ רול
+        {{ title }}
     </h1>
     <span>
-        20.04.2420 | 16:20
+        {{ getDate() }}
+        |
+        {{ getTime() }}
     </span>
 </div>

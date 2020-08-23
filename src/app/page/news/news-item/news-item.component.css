@@ -1,90 +1,90 @@
 :host {
 
-  display: block;
-  overflow: hidden;
+    display: block;
+    overflow: hidden;
 
 }
 
 .center {
-  flex-grow: 4;
-  max-width: var(--page-size);
-  height: 100%;
+    flex-grow: 4;
+    max-width: var(--page-size);
+    height: 100%;
 
 
 }
 
 .background:after {
-  background-image: url("https://i.imgur.com/GUTseTO.jpg");
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  content: " ";
-  background-position: center;
-  background-size: cover;
-  display: block;
-  border: 2px solid red;
-  filter: blur(0.5em);
-  transform: scale(1.2);
+    background-image: url("https://i.imgur.com/GUTseTO.jpg");
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    content: " ";
+    background-position: center;
+    background-size: cover;
+    display: block;
+    border: 2px solid red;
+    filter: blur(0.5em);
+    transform: scale(1.2);
 
 }
 
 .background {
-  overflow: hidden;
-  min-height: 100vh;
-  width: 100%;
-  display: block;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+    display: block;
 
-  display: block;
-  z-index: 0;
-  overflow: hidden;
-  position: relative;
-  border: 2px solid pink;
+    display: block;
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid pink;
 
 }
 
 
 
 .flex {
-  margin-top: 8em;
-  justify-content: center;
-  height: 100%;
+    margin-top: 8em;
+    justify-content: center;
+    height: 100%;
 }
 
 .left,
 .right {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .flex>div {
-  border: 1px solid pink;
-  height: 100%;
+    border: 1px solid pink;
+    height: 100%;
 }
 
 header {
-  overflow: hidden;
-  max-height: 250px;
-  width: 100%;
-  display: block;
+    overflow: hidden;
+    max-height: 350px;
+    width: 100%;
+    display: block;
 }
 
 header img {
-  width: 100%;
+    width: 100%;
 }
 
 .mat-card-title {
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid pink;
-  width: 100% !important;
-  display: block !important;
-  font-size: 2em;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid pink;
+    width: 100% !important;
+    display: block !important;
+    font-size: 2em;
 }
 
 .img-warp {
-  width: 100%;
-  max-height: 250px;
-  overflow: hidden;
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
 }

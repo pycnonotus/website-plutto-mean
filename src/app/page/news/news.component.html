@@ -1,37 +1,33 @@
 <div class="background-arena">
-  <div class="big-pad">
-    <app-card
-      routerLink="{{ '/news/' + n.id }}"
-      *ngFor="let n of rawNews.slice(0, 3)"
-      [title]="n.title"
-      [subText]="n.subText"
-      [imagePath]="n.imagePath"
-      [class.mat-elevation-z2]="true"
-    >
-    </app-card>
-  </div>
-  <div class="screen">
-    <div class="scroll-icon" (click)="scrollTo(allNewDIv)">
-      <mat-icon>expand_more</mat-icon>
+    <div class="big-pad"></div>
+    <div class="screen">
+        <div class="scroll-icon" (click)="scrollTo(allNewDIv)">
+            <mat-icon>expand_more</mat-icon>
+        </div>
     </div>
-  </div>
 </div>
 <div class="site-row-background" #allNewDIv>
-  <div class="site-row">
-    <br />
-    <div>
-      <mat-card *ngFor="let n of rawNews.slice(3, 3 + maxPosts)">
-        <app-mini-card routerLink="{{ '/news/' + n.id }}" [title]="n.title">
-        </app-mini-card>
-      </mat-card>
+    <div class="site-row">
+        <br />
+        <div>
+            <mat-card *ngFor="let n of rawNews.slice(0, 0 + maxPosts)">
+                <app-mini-card
+                    routerLink="{{ '/news/' + n.id }}"
+                    [title]="n.title"
+                    [subText]="n.subText"
+                    [imagePath]="n.imagePath"
+                    [date]="n.date"
+                >
+                </app-mini-card>
+            </mat-card>
+        </div>
     </div>
-  </div>
 
-  <div class="site-row load-more-wrap" *ngIf="maxPosts + 3 <= rawNews.length">
-    <button mat-button (click)="increaseMaxPost()">
-      טען עוד
-    </button>
-  </div>
+    <div class="site-row load-more-wrap" *ngIf="maxPosts + 3 <= rawNews.length">
+        <button mat-button (click)="increaseMaxPost()">
+            טען עוד
+        </button>
+    </div>
 </div>
 <!-- <app-card
       *ngFor="let n of rawNews.slice(3, 999)"

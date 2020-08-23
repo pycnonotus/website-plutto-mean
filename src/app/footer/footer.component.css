@@ -4,7 +4,7 @@
     display: block;
     position: relative;
     z-index: 0;
-    padding: 0.5em 0;
+
 }
 
 .flex {
@@ -35,6 +35,73 @@ li {
 }
 
 .black {
-    background-color: #101d2f;
-    background: rgb(16, 29, 47);
+    background-color: #333;
+    text-align: center;
+}
+
+.black button {
+    width: 30px;
+    background: none;
+    color: white;
+}
+
+.black button img {}
+
+.black h2 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 19px;
+    color: rgba(255, 255, 255, .8);
+}
+
+.black ul {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+
+
+.black li {
+    margin: 0 0.5em;
+    display: inline-block;
+}
+
+.youtube {
+    background: url('/assets/img/icons/social/youtube.svg');
+
+    vertical-align: top;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    vertical-align: top;
+    filter: invert(1);
+
+}
+
+.discord {
+    background: url('/assets/img/icons/social/discord.svg');
+
+    vertical-align: top;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    filter: invert(1);
+
+    vertical-align: top;
+}
+
+.twitch {
+    background: url('/assets/img/icons/social/twitch.svg');
+
+    vertical-align: top;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    vertical-align: top;
+    filter: invert(1);
+
 }

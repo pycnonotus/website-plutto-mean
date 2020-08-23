@@ -31,8 +31,14 @@
                 class="{{ i + 1 === active ? 'active item' : 'item' }}"
                 *ngFor="let nw of newsRaw; let i = index"
                 [class.mat-elevation-z8]="i + 1 === active"
+                routerLink="{{ '/news/' + nw.id }}"
             >
-                <app-slied-item [isActive]="i + 1 === active"></app-slied-item>
+                <app-slied-item
+                    [isActive]="i + 1 === active"
+                    [date]="nw.date"
+                    [title]="nw.title"
+                    [imgSrc]="nw.imagePath"
+                ></app-slied-item>
             </div>
             <div class="item sudo"></div>
             <div class="item sudo"></div>
