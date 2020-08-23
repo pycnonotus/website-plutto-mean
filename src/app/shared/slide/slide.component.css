@@ -16,9 +16,7 @@
 
 .scroll {
     white-space: nowrap;
-    scroll-snap-type: x mandatory;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 50%;
+
 }
 
 .item {

@@ -185,3 +185,15 @@ hr.style-two {
     background-position: center;
     background-size: fit;
 }
+
+.fake-hr-line-2 {
+    border: 0;
+    content: " xxx";
+    height: 54px;
+    background-image: url('/assets/img/lines/line-2.png');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0 auto;
+    background-position: center;
+    background-size: fit;
+}

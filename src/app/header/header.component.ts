@@ -19,7 +19,6 @@ export class HeaderComponent implements OnInit {
         { name: 'עולם המיני-גיימס', path: 'minigames' },
         { name: 'חנות השרת', path: '/shop' },
         { name: 'תמיכה', path: 'support' },
-        { name: 'אודות', path: 'about' },
     ];
 
     ngOnInit(): void {

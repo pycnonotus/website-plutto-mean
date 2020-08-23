@@ -5,7 +5,7 @@
                 <button
                     mat-button
                     (click)="moveLeft(-432)"
-                    [disabled]="active >= 12"
+                    [disabled]="active >= 12 || timeOut"
                 >
                     <mat-icon>
                         keyboard_arrow_left
@@ -16,7 +16,7 @@
                 <button
                     mat-button
                     (click)="moveLeft(432)"
-                    [disabled]="!(active > 1)"
+                    [disabled]="!(active > 1) || timeOut"
                 >
                     <mat-icon>
                         keyboard_arrow_right
@@ -34,13 +34,13 @@
                 <app-slied-item></app-slied-item>
             </div>
             <div class="item">
-                <app-slied-item></app-slied-item>
+                <app-slied-item [isActive]="active === 1"></app-slied-item>
             </div>
             <div class="item">
-                <app-slied-item></app-slied-item>
+                <app-slied-item [isActive]="active === 2"></app-slied-item>
             </div>
-            <div class="item active" [class.mat-elevation-z8]="true">
-                <app-slied-item [isActive]="true"></app-slied-item>
+            <div class="item" [class.mat-elevation-z8]="true">
+                <app-slied-item [isActive]="active === 3"></app-slied-item>
             </div>
             <div class="item">
                 <app-slied-item></app-slied-item>

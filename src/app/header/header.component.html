@@ -1,65 +1,42 @@
 <div class="tab-line">
-  <div
-    class="line"
-    [style.left]="leftX + 'px'"
-    [style.width]="leftWidth + 'px'"
-  ></div>
+    <div
+        class="line"
+        [style.left]="leftX + 'px'"
+        [style.width]="leftWidth + 'px'"
+    ></div>
 </div>
 <mat-toolbar class="unscrolled" color="accent" [class.mat-elevation-z8]="true">
-  <div class="sidenav-warp">
-    <button
-      hidden="true"
-      mat-icon-button
-      class="links-mobile"
-      aria-label="Example icon-button with menu icon"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
-
-  
-
-    <ul class="links-desktop">
-      <li *ngFor="let cat of catagories">
-        <a
-          (click)="moveLine($event)"
-          (mouseover)="onHover($event)"
-          (mouseout)="onDeHover($event)"
-          routerLink="{{ cat.path }}"
-          routerLinkActive="mat-primary"
-          [routerLinkActiveOptions]="{ exact: true }"
+    <div class="sidenav-warp">
+        <button
+            hidden="true"
+            mat-icon-button
+            class="links-mobile"
+            aria-label="Example icon-button with menu icon"
         >
-          {{ cat.name }}
-        </a>
-      </li>
-    </ul>
-      <ul class="logo">
-        <li>
-            <img src="/assets/img/logo-anton.png" />
-        </li>
-    </ul>
-    <span class="example-spacer"></span>
-
-    <ul class="links-desktop">
-      <li>
-        <button mat-button href="">
-          minecraft.israil.com
+            <mat-icon>menu</mat-icon>
         </button>
-      </li>
-      <li>
-        <a
-          mat-icon-button
-          class="example-icon"
-          target="_blank"
-          aria-label="Example icon-button with share icon"
-          href=" https://discord.gg/zvAnJAx"
-        >
-          <button mat-button>
-            d
-          </button>
-        </a>
-      </li>
-    </ul>
-  </div>
+
+        <ul class="links-desktop">
+            <li *ngFor="let cat of catagories">
+                <a
+                    (click)="moveLine($event)"
+                    (mouseover)="onHover($event)"
+                    (mouseout)="onDeHover($event)"
+                    routerLink="{{ cat.path }}"
+                    routerLinkActive="mat-primary"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                >
+                    {{ cat.name }}
+                </a>
+            </li>
+        </ul>
+        <ul class="logo">
+            <li>
+                <img src="/assets/img/logo-anton.png" />
+            </li>
+        </ul>
+        <span class="example-spacer"></span>
+    </div>
 </mat-toolbar>
 
 <app-main-nav> </app-main-nav>

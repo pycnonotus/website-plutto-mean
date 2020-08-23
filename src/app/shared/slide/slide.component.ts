@@ -12,6 +12,7 @@ export class SlideComponent implements OnInit {
     scrollLeft = 0;
     rigth = 0;
     active = 3;
+    timeOut = false;
     @ViewChild('sliderBody', { static: true }) slider: ElementRef;
     ngOnInit(): void {
         this.slider.nativeElement.scrollLeft += 432 * -2;
@@ -59,7 +60,13 @@ export class SlideComponent implements OnInit {
             }
         }
 
-        this.rigth = px;
-        this.slider.nativeElement.scrollLeft += px;
+        this.timeOut = true;
+        setTimeout(() => {
+            this.timeOut = false;
+        }, 300);
+        if (this.active > 3) {
+            this.rigth = px;
+            this.slider.nativeElement.scrollLeft += px;
+        }
     }
 }
